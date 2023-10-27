@@ -1,0 +1,116 @@
+[gd_scene load_steps=12 format=3 uid="uid://dc7kntrdvjrki"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
+[ext_resource type="Texture2D" uid="uid://epnroesxy6pu" path="res://resources/art/background.png" id="1_vf0al"]
+[ext_resource type="Texture2D" uid="uid://bd8eclh30vucc" path="res://resources/art/color.jpg" id="2_l6ari"]
+[ext_resource type="Texture2D" uid="uid://6yvu4vmfrtim" path="res://resources/art/redcolor.jpg" id="3_q4my2"]
+[ext_resource type="Texture2D" uid="uid://cyelfncrk4klo" path="res://resources/art/bluecolor.jpg" id="4_rtxd7"]
+[ext_resource type="Texture2D" uid="uid://srahetcuhpcw" path="res://resources/art/greencolor.jpg" id="5_wgqwq"]
+[ext_resource type="Texture2D" uid="uid://diu3ql8nvfauf" path="res://resources/art/yellowcolor.jpg" id="6_jysfq"]
+[ext_resource type="Texture2D" uid="uid://dccs6wk0eikq1" path="res://resources/art/yellownocolor.jpg" id="7_gc8oi"]
+[ext_resource type="Texture2D" uid="uid://dsksxkybxens5" path="res://resources/art/rednocolor.jpg" id="8_nj0dk"]
+[ext_resource type="Texture2D" uid="uid://dqreb2ttnv0ry" path="res://resources/art/bluenocolor.jpg" id="9_523s8"]
+[ext_resource type="Texture2D" uid="uid://ksndxhsdpnm" path="res://resources/art/greennocolor.jpg" id="10_wfatn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_icmpg")
+metadata/_edit_vertical_guides_ = [-155.0]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.25, 322.75)
+scale = Vector2(4.105, 4.30059)
+texture = ExtResource("1_vf0al")
+
+[node name="color sample" type="Sprite2D" parent="."]
+position = Vector2(997, 115)
+scale = Vector2(0.209896, 0.199223)
+texture = ExtResource("2_l6ari")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="picker1" type="Button" parent="Node"]
+offset_left = 281.0
+offset_top = 339.0
+offset_right = 359.0
+offset_bottom = 412.0
+
+[node name="block1" type="Sprite2D" parent="Node/picker1"]
+position = Vector2(41, 36)
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("3_q4my2")
+
+[node name="picker2" type="Button" parent="Node"]
+offset_left = 366.0
+offset_top = 340.0
+offset_right = 442.0
+offset_bottom = 416.0
+
+[node name="block2" type="Sprite2D" parent="Node/picker2"]
+position = Vector2(42, 34)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("4_rtxd7")
+
+[node name="picker3" type="Button" parent="Node"]
+offset_left = 280.0
+offset_top = 423.0
+offset_right = 358.0
+offset_bottom = 496.0
+
+[node name="block3" type="Sprite2D" parent="Node/picker3"]
+position = Vector2(41, 36)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("5_wgqwq")
+
+[node name="picker4" type="Button" parent="Node"]
+offset_left = 374.0
+offset_top = 426.0
+offset_right = 443.0
+offset_bottom = 492.0
+
+[node name="block4" type="Sprite2D" parent="Node/picker4"]
+position = Vector2(34, 34)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("6_jysfq")
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="block1" type="Sprite2D" parent="Node2"]
+position = Vector2(755.051, 377.751)
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="block2" type="Sprite2D" parent="Node2"]
+position = Vector2(840.051, 376.751)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("8_nj0dk")
+
+[node name="block3" type="Sprite2D" parent="Node2"]
+position = Vector2(754.051, 461.751)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("9_523s8")
+
+[node name="block4" type="Sprite2D" parent="Node2"]
+position = Vector2(840.051, 462.751)
+scale = Vector2(0.182786, 0.179675)
+texture = ExtResource("10_wfatn")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="hint" type="Node2D" parent="."]
+visible = false
+position = Vector2(67, 58)
+
+[node name="Sprite2D" type="Sprite2D" parent="hint"]
+position = Vector2(12, -34)
+scale = Vector2(0.0681342, 0.0669456)
+texture = ExtResource("3_q4my2")
+
+[connection signal="pressed" from="Node/picker1" to="." method="_on_picker_1_pressed"]
+[connection signal="ready" from="Node/picker1" to="." method="_on_picker_1_ready"]
+[connection signal="pressed" from="Node/picker2" to="." method="_on_picker_2_pressed"]
+[connection signal="ready" from="Node/picker2" to="." method="_on_picker_2_ready"]
+[connection signal="pressed" from="Node/picker3" to="." method="_on_picker_3_pressed"]
+[connection signal="ready" from="Node/picker3" to="." method="_on_picker_3_ready"]
+[connection signal="pressed" from="Node/picker4" to="." method="_on_picker_4_pressed"]
+[connection signal="ready" from="Node/picker4" to="." method="_on_picker_4_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
