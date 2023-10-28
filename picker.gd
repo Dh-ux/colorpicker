@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var console = get_parent()
-@export_enum("Red", "Green", "Blue", 'Yellow') var color_type: String = "Red"
+@onready var console = get_parent().get_parent()
+@export_enum("DarkOrange", "DarkYellow", "DarkPurple", "DarkGreen", "DarkBlue") var color_type: String = "DarkOrange"
 
 var health
 

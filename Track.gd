@@ -11,7 +11,7 @@ func start():
 
 func _process(delta):
 	if enabled:
-		$key.position += Vector2(1,0)*100*delta
+		$key.position += Vector2(1,0)*200*delta
 		
 
 func reset():

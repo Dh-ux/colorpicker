@@ -5,8 +5,8 @@ extends Node2D
 
 @onready var timer = $Timer
 
-var color_types = ["Red","Green","Blue",'Yellow']
-var target_color = "Red"
+var color_types = ["DarkOrange", "DarkYellow", "DarkPurple", "DarkGreen", "DarkBlue"]
+var target_color = "DarkOrange"
 
 var target_button = null
 
@@ -23,7 +23,7 @@ func _ready():
 	
 func on_beats():
 	internal_beat += 1
-	if beat%8 == 0:
+	if beat%4 == 0:
 		internal_beat = 0
 		on_bar()
 		
@@ -38,14 +38,16 @@ func on_bar():
 		$Track.start()
 		print(target_color)
 		
-		if target_color == 'Red':
+		if target_color == 'DarkOrange':
 			hint_ref.texture = load("res://resources/art/redcolor.jpg")
-		elif target_color == 'Blue':
+		elif target_color == 'DarkBlue':
 			hint_ref.texture = load("res://resources/art/bluecolor.jpg")
-		elif target_color == 'Green':
+		elif target_color == 'DarkGreen':
 			hint_ref.texture = load("res://resources/art/greencolor.jpg")
-		elif target_color == 'Yellow':
+		elif target_color == 'DarkYellow':
 			hint_ref.texture = load("res://resources/art/yellowcolor.jpg")
+		elif target_color == 'DarkPurple':
+			hint_ref.texture = 	load("res://resources/art/purplecolor.jpg")
 		
 		hint_ref.visible = true
 		#timer.start(4)
@@ -70,16 +72,16 @@ func _timeout():
 func color_picked(target):
 	#target.get_node('color_block').hide()
 	
-	if target_color == 'Red':
-		$Node2/block2.texture = load("res://resources/art/redcolor.jpg")
-	elif target_color == 'Blue':
-		$Node2/block3.texture = load("res://resources/art/bluecolor.jpg")
-	elif target_color == 'Green':
-		$Node2/block4.texture = load("res://resources/art/greencolor.jpg")
-	elif target_color == 'Yellow':
-		$Node2/block1.texture = load("res://resources/art/yellowcolor.jpg")
-	elif target_color == 'Purple':
-		$Node2/block1.texture = load("res://resources/art/yellowcolor.jpg")
+	if target_color == 'DarkOrange':
+		$Node/darkorange.visible = true
+	elif target_color == 'DarkBlue':
+		$Node/darkblue.visible = true
+	elif target_color == 'DarkGreen':
+		$Node/darkgreen.visible = true
+	elif target_color == 'DarkYellow':
+		$Node/darkyellow.visible = true
+	elif target_color == 'DarkPurple':
+		$Node/darkpurple.visible = true
 
 func game_over():
 	pass
