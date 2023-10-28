@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dc7kntrdvjrki"]
+[gd_scene load_steps=14 format=3 uid="uid://dc7kntrdvjrki"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
 [ext_resource type="Texture2D" uid="uid://epnroesxy6pu" path="res://resources/art/background.png" id="1_vf0al"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://picker.gd" id="8_uabh1"]
 [ext_resource type="Texture2D" uid="uid://dqreb2ttnv0ry" path="res://resources/art/bluenocolor.jpg" id="9_523s8"]
 [ext_resource type="Texture2D" uid="uid://ksndxhsdpnm" path="res://resources/art/greennocolor.jpg" id="10_wfatn"]
+[ext_resource type="AudioStream" uid="uid://cedtg6yaxxeys" path="res://resources/music/WIppedCreamDemo(1).wav" id="13_vlmkw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_icmpg")
@@ -26,56 +27,6 @@ texture = ExtResource("1_vf0al")
 position = Vector2(997, 115)
 scale = Vector2(0.209896, 0.199223)
 texture = ExtResource("2_l6ari")
-
-[node name="Node" type="Node" parent="."]
-
-[node name="picker1" type="Button" parent="Node"]
-visible = false
-offset_left = 279.0
-offset_top = 336.0
-offset_right = 361.0
-offset_bottom = 412.0
-
-[node name="block1" type="Sprite2D" parent="Node/picker1"]
-position = Vector2(41, 37)
-scale = Vector2(0.187631, 0.179916)
-texture = ExtResource("3_q4my2")
-
-[node name="picker2" type="Button" parent="Node"]
-visible = false
-offset_left = 366.0
-offset_top = 340.0
-offset_right = 442.0
-offset_bottom = 416.0
-
-[node name="block2" type="Sprite2D" parent="Node/picker2"]
-position = Vector2(42, 34)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("4_rtxd7")
-
-[node name="picker3" type="Button" parent="Node"]
-visible = false
-offset_left = 280.0
-offset_top = 423.0
-offset_right = 358.0
-offset_bottom = 496.0
-
-[node name="block3" type="Sprite2D" parent="Node/picker3"]
-position = Vector2(41, 36)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("5_wgqwq")
-
-[node name="picker4" type="Button" parent="Node"]
-visible = false
-offset_left = 374.0
-offset_top = 426.0
-offset_right = 443.0
-offset_bottom = 492.0
-
-[node name="block4" type="Sprite2D" parent="Node/picker4"]
-position = Vector2(34, 34)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("6_jysfq")
 
 [node name="Node2" type="Node" parent="."]
 
@@ -292,14 +243,10 @@ texture = ExtResource("4_rtxd7")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker12"]
 polygon = PackedVector2Array(-44, -44, -47, 44, 45, 44, 44, -45, 16, -46, 97, -60, -105, -63, -18, -46)
 
-[connection signal="pressed" from="Node/picker1" to="." method="_on_picker_1_pressed"]
-[connection signal="ready" from="Node/picker1" to="." method="_on_picker_1_ready"]
-[connection signal="pressed" from="Node/picker2" to="." method="_on_picker_2_pressed"]
-[connection signal="ready" from="Node/picker2" to="." method="_on_picker_2_ready"]
-[connection signal="pressed" from="Node/picker3" to="." method="_on_picker_3_pressed"]
-[connection signal="ready" from="Node/picker3" to="." method="_on_picker_3_ready"]
-[connection signal="pressed" from="Node/picker4" to="." method="_on_picker_4_pressed"]
-[connection signal="ready" from="Node/picker4" to="." method="_on_picker_4_ready"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vlmkw")
+autoplay = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="input_event" from="picker5" to="picker5" method="_on_input_event"]
 [connection signal="mouse_entered" from="picker5" to="picker5" method="_on_mouse_entered"]
