@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://epnroesxy6pu" path="res://resources/art/background.png" id="1_vf0al"]
 [ext_resource type="Texture2D" uid="uid://bd8eclh30vucc" path="res://resources/art/color.jpg" id="2_l6ari"]
 [ext_resource type="Texture2D" uid="uid://6yvu4vmfrtim" path="res://resources/art/redcolor.jpg" id="3_q4my2"]
-[ext_resource type="Texture2D" uid="uid://tm0g5vnht01u" path="res://resources/art/circle.png" id="4_nak57"]
 [ext_resource type="Texture2D" uid="uid://cyelfncrk4klo" path="res://resources/art/bluecolor.jpg" id="4_rtxd7"]
 [ext_resource type="Texture2D" uid="uid://srahetcuhpcw" path="res://resources/art/greencolor.jpg" id="5_wgqwq"]
 [ext_resource type="Texture2D" uid="uid://diu3ql8nvfauf" path="res://resources/art/yellowcolor.jpg" id="6_jysfq"]
 [ext_resource type="Texture2D" uid="uid://dccs6wk0eikq1" path="res://resources/art/yellownocolor.jpg" id="7_gc8oi"]
 [ext_resource type="Texture2D" uid="uid://dsksxkybxens5" path="res://resources/art/rednocolor.jpg" id="8_nj0dk"]
+[ext_resource type="Script" path="res://picker.gd" id="8_uabh1"]
 [ext_resource type="Texture2D" uid="uid://dqreb2ttnv0ry" path="res://resources/art/bluenocolor.jpg" id="9_523s8"]
 [ext_resource type="Texture2D" uid="uid://ksndxhsdpnm" path="res://resources/art/greennocolor.jpg" id="10_wfatn"]
 
@@ -29,22 +29,20 @@ texture = ExtResource("2_l6ari")
 
 [node name="Node" type="Node" parent="."]
 
-[node name="picker1" type="TextureButton" parent="Node"]
+[node name="picker1" type="Button" parent="Node"]
+visible = false
 offset_left = 279.0
 offset_top = 336.0
 offset_right = 361.0
 offset_bottom = 412.0
-texture_normal = ExtResource("4_nak57")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="block1" type="Sprite2D" parent="Node/picker1"]
-visible = false
-position = Vector2(31, 31)
+position = Vector2(41, 37)
 scale = Vector2(0.187631, 0.179916)
 texture = ExtResource("3_q4my2")
 
 [node name="picker2" type="Button" parent="Node"]
+visible = false
 offset_left = 366.0
 offset_top = 340.0
 offset_right = 442.0
@@ -56,6 +54,7 @@ scale = Vector2(0.182786, 0.179675)
 texture = ExtResource("4_rtxd7")
 
 [node name="picker3" type="Button" parent="Node"]
+visible = false
 offset_left = 280.0
 offset_top = 423.0
 offset_right = 358.0
@@ -67,6 +66,7 @@ scale = Vector2(0.182786, 0.179675)
 texture = ExtResource("5_wgqwq")
 
 [node name="picker4" type="Button" parent="Node"]
+visible = false
 offset_left = 374.0
 offset_top = 426.0
 offset_right = 443.0
@@ -110,6 +110,188 @@ position = Vector2(12, -34)
 scale = Vector2(0.0681342, 0.0669456)
 texture = ExtResource("3_q4my2")
 
+[node name="picker5" type="Area2D" parent="."]
+position = Vector2(318, 283)
+script = ExtResource("8_uabh1")
+
+[node name="nocolorblock" type="Sprite2D" parent="picker5"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker5"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("3_q4my2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker5"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker5"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker6" type="Area2D" parent="."]
+position = Vector2(411, 283)
+script = ExtResource("8_uabh1")
+color_type = "Green"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker6"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker6"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("5_wgqwq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker6"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker6"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker7" type="Area2D" parent="."]
+position = Vector2(408, 190)
+script = ExtResource("8_uabh1")
+color_type = "Blue"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker7"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker7"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("4_rtxd7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker7"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker7"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker8" type="Area2D" parent="."]
+position = Vector2(213, 280)
+script = ExtResource("8_uabh1")
+
+[node name="nocolorblock" type="Sprite2D" parent="picker8"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker8"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("3_q4my2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker8"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker8"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker9" type="Area2D" parent="."]
+position = Vector2(409, 383)
+script = ExtResource("8_uabh1")
+color_type = "Yellow"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker9"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker9"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("6_jysfq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker9"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker9"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker10" type="Area2D" parent="."]
+position = Vector2(314, 382)
+script = ExtResource("8_uabh1")
+color_type = "Yellow"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker10"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker10"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("6_jysfq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker10"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker10"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker11" type="Area2D" parent="."]
+position = Vector2(215, 380)
+script = ExtResource("8_uabh1")
+color_type = "Yellow"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker11"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker11"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("6_jysfq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker11"]
+visible = false
+polygon = PackedVector2Array(-46, -42, -45, 43, 45, 43, 44, -45)
+
+[node name="Polygon2D" type="Polygon2D" parent="picker11"]
+visible = false
+modulate = Color(1, 0.552941, 0.0235294, 0.482353)
+position = Vector2(-41, -37)
+color = Color(0.988235, 0.635294, 0.0117647, 1)
+polygon = PackedVector2Array(-3, -7, -3, 79, 86, 79, 86, -7)
+
+[node name="picker12" type="Area2D" parent="."]
+position = Vector2(293, 114)
+script = ExtResource("8_uabh1")
+color_type = "Blue"
+
+[node name="nocolorblock" type="Sprite2D" parent="picker12"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("7_gc8oi")
+
+[node name="colorblock" type="Sprite2D" parent="picker12"]
+scale = Vector2(0.187631, 0.179916)
+texture = ExtResource("4_rtxd7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="picker12"]
+polygon = PackedVector2Array(-44, -44, -47, 44, 45, 44, 44, -45, 16, -46, 97, -60, -105, -63, -18, -46)
+
 [connection signal="pressed" from="Node/picker1" to="." method="_on_picker_1_pressed"]
 [connection signal="ready" from="Node/picker1" to="." method="_on_picker_1_ready"]
 [connection signal="pressed" from="Node/picker2" to="." method="_on_picker_2_pressed"]
@@ -119,3 +301,35 @@ texture = ExtResource("3_q4my2")
 [connection signal="pressed" from="Node/picker4" to="." method="_on_picker_4_pressed"]
 [connection signal="ready" from="Node/picker4" to="." method="_on_picker_4_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="input_event" from="picker5" to="picker5" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker5" to="picker5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker5" to="picker5" method="_on_mouse_exited"]
+[connection signal="ready" from="picker5" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker6" to="picker6" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker6" to="picker6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker6" to="picker6" method="_on_mouse_exited"]
+[connection signal="ready" from="picker6" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker7" to="picker7" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker7" to="picker7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker7" to="picker7" method="_on_mouse_exited"]
+[connection signal="ready" from="picker7" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker8" to="picker8" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker8" to="picker8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker8" to="picker8" method="_on_mouse_exited"]
+[connection signal="ready" from="picker8" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker9" to="picker9" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker9" to="picker9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker9" to="picker9" method="_on_mouse_exited"]
+[connection signal="ready" from="picker9" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker10" to="picker10" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker10" to="picker10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker10" to="picker10" method="_on_mouse_exited"]
+[connection signal="ready" from="picker10" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker11" to="picker11" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker11" to="picker11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker11" to="picker11" method="_on_mouse_exited"]
+[connection signal="ready" from="picker11" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="picker12" to="picker12" method="_on_input_event"]
+[connection signal="mouse_entered" from="picker12" to="picker12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="picker12" to="picker12" method="_on_mouse_exited"]
+[connection signal="ready" from="picker12" to="." method="_on_picker_1_ready"]
