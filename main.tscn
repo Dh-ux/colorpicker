@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dc7kntrdvjrki"]
+[gd_scene load_steps=13 format=3 uid="uid://dc7kntrdvjrki"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
 [ext_resource type="Texture2D" uid="uid://epnroesxy6pu" path="res://resources/art/background.png" id="1_vf0al"]
 [ext_resource type="Texture2D" uid="uid://bd8eclh30vucc" path="res://resources/art/color.jpg" id="2_l6ari"]
 [ext_resource type="Texture2D" uid="uid://6yvu4vmfrtim" path="res://resources/art/redcolor.jpg" id="3_q4my2"]
+[ext_resource type="Texture2D" uid="uid://tm0g5vnht01u" path="res://resources/art/circle.png" id="4_nak57"]
 [ext_resource type="Texture2D" uid="uid://cyelfncrk4klo" path="res://resources/art/bluecolor.jpg" id="4_rtxd7"]
 [ext_resource type="Texture2D" uid="uid://srahetcuhpcw" path="res://resources/art/greencolor.jpg" id="5_wgqwq"]
 [ext_resource type="Texture2D" uid="uid://diu3ql8nvfauf" path="res://resources/art/yellowcolor.jpg" id="6_jysfq"]
@@ -17,7 +18,7 @@ script = ExtResource("1_icmpg")
 metadata/_edit_vertical_guides_ = [-155.0]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576.25, 322.75)
+position = Vector2(598, 331)
 scale = Vector2(4.105, 4.30059)
 texture = ExtResource("1_vf0al")
 
@@ -28,14 +29,18 @@ texture = ExtResource("2_l6ari")
 
 [node name="Node" type="Node" parent="."]
 
-[node name="picker1" type="Button" parent="Node"]
-offset_left = 281.0
-offset_top = 339.0
-offset_right = 359.0
+[node name="picker1" type="TextureButton" parent="Node"]
+offset_left = 279.0
+offset_top = 336.0
+offset_right = 361.0
 offset_bottom = 412.0
+texture_normal = ExtResource("4_nak57")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="block1" type="Sprite2D" parent="Node/picker1"]
-position = Vector2(41, 36)
+visible = false
+position = Vector2(31, 31)
 scale = Vector2(0.187631, 0.179916)
 texture = ExtResource("3_q4my2")
 
