@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b3yq6phws5tw3"]
+[gd_scene load_steps=7 format=3 uid="uid://cfg8ftahr0i6w"]
 
 [ext_resource type="Script" path="res://dialouge2.gd" id="1_hmciv"]
 [ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="2_yp683"]
 [ext_resource type="Texture2D" uid="uid://b6f6ob2kb6h6f" path="res://resources/pallete/pallete.png" id="3_aeogk"]
 [ext_resource type="Texture2D" uid="uid://ddf6jn0anqx6k" path="res://resources/image1/New folder/损坏画框.PNG" id="4_2nr5s"]
 [ext_resource type="Texture2D" uid="uid://bwghahh8nldmt" path="res://resources/CASED/CASED.png" id="5_r5vg1"]
-[ext_resource type="FontFile" uid="uid://bey3te2erxerx" path="res://resources/fonts/VonwaonBitmap-16px.ttf" id="6_cch2l"]
 [ext_resource type="Texture2D" uid="uid://dpca148kuegle" path="res://resources/CASED/ArtistPigeon.png" id="6_vh0e8"]
 
 [node name="dialouge2" type="Node2D"]
@@ -35,24 +34,24 @@ offset_bottom = 611.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(426, 39.5)
-scale = Vector2(0.477895, 0.3425)
+position = Vector2(434, 52.5)
+scale = Vector2(0.477895, 0.2775)
 texture = ExtResource("5_r5vg1")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.188571
-anchor_top = -0.150538
-anchor_right = -0.188571
-anchor_bottom = -0.150538
+anchor_left = -0.253714
+anchor_top = 0.0860215
+anchor_right = 0.244571
+anchor_bottom = 0.0860215
 offset_left = 229.0
 offset_top = 8.0
 offset_right = 654.0
 offset_bottom = 77.0
-theme_override_fonts/font = ExtResource("6_cch2l")
 theme_override_font_sizes/font_size = 29
 text = "Hello!"
+horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -70,7 +69,7 @@ position = Vector2(36.5, 21)
 scale = Vector2(0.0356481, 0.0186992)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Panel"]
-position = Vector2(142, -114)
+position = Vector2(142, -91)
 scale = Vector2(0.296094, 0.288281)
 texture = ExtResource("6_vh0e8")
 

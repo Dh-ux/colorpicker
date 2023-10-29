@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dc7kntrdvjrki"]
+[gd_scene load_steps=31 format=3 uid="uid://dc7kntrdvjrki"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
 [ext_resource type="Texture2D" uid="uid://uhnn388br4mk" path="res://resources/image1/New folder/黑背景.PNG" id="4_qp6l7"]
@@ -30,7 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://b76m6q86begn3" path="res://resources/image1/画框.PNG" id="26_bu2i7"]
 [ext_resource type="Texture2D" uid="uid://bwghahh8nldmt" path="res://resources/CASED/CASED.png" id="29_sqvaa"]
 [ext_resource type="PackedScene" uid="uid://fglnx1e6utut" path="res://resources/vfx/start_particle.tscn" id="29_vbvak"]
-[ext_resource type="FontFile" uid="uid://bey3te2erxerx" path="res://resources/fonts/VonwaonBitmap-16px.ttf" id="30_2rugy"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_icmpg")
@@ -301,19 +300,18 @@ offset_right = 917.0
 offset_bottom = 638.0
 
 [node name="Sprite2D" type="Sprite2D" parent="OverPanel"]
-position = Vector2(443, 43)
-scale = Vector2(0.476842, 0.245)
+position = Vector2(437.5, 47)
+scale = Vector2(0.474211, 0.225)
 texture = ExtResource("29_sqvaa")
 
 [node name="Label" type="Label" parent="OverPanel"]
 layout_mode = 0
-offset_left = 396.0
+offset_left = 394.0
 offset_top = 28.0
-offset_right = 504.0
+offset_right = 482.0
 offset_bottom = 82.0
-theme_override_fonts/font = ExtResource("30_2rugy")
 theme_override_font_sizes/font_size = 27
-text = "完成啦！"
+text = "完成！"
 
 [node name="nextButton" type="Button" parent="OverPanel"]
 layout_mode = 0
