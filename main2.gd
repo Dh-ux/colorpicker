@@ -115,7 +115,7 @@ func color_picked(target):
 		$Node/yellow.visible = true	
 	elif target_color == 'brightblue':
 		$Node/blue.visible = true	
-	elif target_color == 'brightGreen':
+	elif target_color == 'brightgreen':
 		$Node/green.visible = true	
 	elif target_color == 'darkred':
 		$Node/darkred.visible = true
