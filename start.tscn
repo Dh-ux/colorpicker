@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2vd5gq1br6gl"]
+[gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
 [ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_o5a7l"]
 [ext_resource type="Texture2D" uid="uid://dnsacr7ga2bva" path="res://resources/art/purplecolor.jpg" id="3_0hakt"]
+[ext_resource type="Script" path="res://startButton.gd" id="3_udrui"]
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_qmdot")
@@ -18,6 +19,7 @@ offset_top = 367.0
 offset_right = 349.0
 offset_bottom = 421.0
 text = "start"
+script = ExtResource("3_udrui")
 
 [node name="Sprite2D" type="Sprite2D" parent="startButton"]
 position = Vector2(48.5, 25.5)
@@ -75,6 +77,8 @@ offset_bottom = 47.0
 theme_override_font_sizes/font_size = 23
 text = "Credit"
 
+[connection signal="mouse_entered" from="startButton" to="startButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="startButton" to="startButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="creditButton" to="." method="_on_credit_button_pressed"]
