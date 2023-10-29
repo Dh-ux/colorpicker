@@ -249,8 +249,7 @@ wait_time = 0.5
 [node name="Node" type="Node" parent="."]
 
 [node name="back" type="Sprite2D" parent="Node"]
-visible = false
-modulate = Color(0.737255, 0.67451, 0.870588, 1)
+modulate = Color(0.901961, 0.854902, 0.780392, 1)
 position = Vector2(707, 279)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_w3y7p")

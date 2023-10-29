@@ -1,6 +1,6 @@
 extends Node2D
 
-var dialogues = ['Now is next','Next line','Start Game!','New lines here']
+var dialogues = ['干得不错！','我翻了翻工坊，看起来还有一些受损的画...','看标签时间紧迫的是这一副。','好像是一张...结婚纪念油画？','怎么这种作品妖精都要毁掉啊，因为酸吗？','总之，还是按照刚才的配合，这次也拜托你了！']
 var d_index = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
