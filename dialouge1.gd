@@ -1,6 +1,6 @@
 extends Node2D
 
-var dialogues = ['Hello, I am idiot','Next step','Start Game!','add new lines here']
+var dialogues = ['Hello, I am XXX','Next line','Start Game!','New lines here']
 var d_index = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
