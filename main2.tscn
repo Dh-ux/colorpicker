@@ -237,6 +237,7 @@ polygon = PackedVector2Array(-98.3333, -342.5, -97.5, -231.667, -90, -231.667, -
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Track" parent="." instance=ExtResource("18_78on2")]
+position = Vector2(481, 587)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_603px")
