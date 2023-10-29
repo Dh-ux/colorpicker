@@ -42,25 +42,25 @@ func on_bar():
 		print(target_color)
 		
 		if target_color == 'DarkOrange':
-			hint_ref.texture = load("res://resources/image1/keys/darkorange.PNG")
+			hint_ref.texture = load("res://resources/image1key/darkorange.PNG")
 		elif target_color == 'DarkBlue':
-			hint_ref.texture = load("res://resources/image1/keys/darkblue.PNG")
+			hint_ref.texture = load("res://resources/image1key/darkblue.PNG")
 		elif target_color == 'DarkGreen':
-			hint_ref.texture = load("res://resources/image1/keys/darkgreen.PNG")
+			hint_ref.texture = load("res://resources/image1key/darkgreen.PNG")
 		elif target_color == 'DarkYellow':
-			hint_ref.texture = load("res://resources/image1/keys/darkyellow.PNG")
+			hint_ref.texture = load("res://resources/image1key/darkyellow.PNG")
 		elif target_color == 'DarkPurple':
-			hint_ref.texture = 	load("res://resources/image1/keys/darkpurple.PNG")
+			hint_ref.texture = 	load("res://resources/image1key/darkpurple.PNG")
 		elif target_color == 'BrightPurple':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightpurple.PNG")
+			hint_ref.texture = 	load("res://resources/image1key/brightpurple.PNG")
 		elif target_color == 'BrightBlue':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightblue.PNG")	
+			hint_ref.texture = 	load("res://resources/image1key/brightblue.PNG")	
 		elif target_color == 'BrightGreen':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightgrenn.PNG")	
+			hint_ref.texture = 	load("res://resources/image1key/brightgreen.PNG")	
 		elif target_color == 'BrightYellow':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightyellow.PNG")
+			hint_ref.texture = 	load("res://resources/image1key/brightyellow.PNG")
 		elif target_color == 'BrightOrange':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightorange.PNG")			
+			hint_ref.texture = 	load("res://resources/image1key/brightorange.PNG")			
 			
 		
 		hint_ref.visible = true
