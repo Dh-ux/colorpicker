@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
-[ext_resource type="Texture2D" uid="uid://uhnn388br4mk" path="res://resources/image1/New folder/黑背景.PNG" id="2_4mxio"]
+[ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_o5a7l"]
 [ext_resource type="Texture2D" uid="uid://dnsacr7ga2bva" path="res://resources/art/purplecolor.jpg" id="3_0hakt"]
 [ext_resource type="Script" path="res://startButton.gd" id="3_udrui"]
 
@@ -9,15 +9,15 @@
 script = ExtResource("1_qmdot")
 
 [node name="backrgound" type="Sprite2D" parent="."]
-position = Vector2(476, 327)
-scale = Vector2(0.459259, 0.274797)
-texture = ExtResource("2_4mxio")
+position = Vector2(485.5, 324.5)
+scale = Vector2(0.503052, 0.499256)
+texture = ExtResource("2_o5a7l")
 
 [node name="startButton" type="Button" parent="."]
-offset_left = 418.0
-offset_top = 374.0
-offset_right = 516.0
-offset_bottom = 428.0
+offset_left = 251.0
+offset_top = 367.0
+offset_right = 349.0
+offset_bottom = 421.0
 text = "start"
 script = ExtResource("3_udrui")
 
@@ -36,10 +36,10 @@ theme_override_font_sizes/font_size = 23
 text = "Start"
 
 [node name="quitButton" type="Button" parent="."]
-offset_left = 419.0
-offset_top = 549.0
-offset_right = 517.0
-offset_bottom = 603.0
+offset_left = 252.0
+offset_top = 538.0
+offset_right = 350.0
+offset_bottom = 592.0
 text = "start"
 
 [node name="Sprite2D" type="Sprite2D" parent="quitButton"]
@@ -57,10 +57,10 @@ theme_override_font_sizes/font_size = 23
 text = "Quit"
 
 [node name="creditButton" type="Button" parent="."]
-offset_left = 417.0
-offset_top = 464.0
-offset_right = 515.0
-offset_bottom = 518.0
+offset_left = 250.0
+offset_top = 454.0
+offset_right = 348.0
+offset_bottom = 508.0
 text = "start"
 
 [node name="Sprite2D" type="Sprite2D" parent="creditButton"]
