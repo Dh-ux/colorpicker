@@ -145,4 +145,4 @@ func _on_beat_counter_timeout():
 
 
 func _on_next_button_pressed():
-	get_tree().change_scene_to_file("res://main2.tscn")
+	get_tree().change_scene_to_file("res://dialouge2.tscn")

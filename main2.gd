@@ -156,3 +156,7 @@ func _on_beat_counter_timeout():
 func _on_timer_timeout():
 	print("out")
 	timeout()
+
+
+func _on_next_button_pressed():
+	get_tree().change_scene_to_file("res://start.tscn")

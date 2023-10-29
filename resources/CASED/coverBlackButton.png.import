@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brit1vm0w7pmu"
-path="res://.godot/imported/yellow.PNG-c62191481630b12db9eb81824766d863.ctex"
+uid="uid://dl36c5wd5mxg4"
+path="res://.godot/imported/coverBlackButton.png-d2280a67857ad8892bfeb15d47639528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/image2key/yellow.PNG"
-dest_files=["res://.godot/imported/yellow.PNG-c62191481630b12db9eb81824766d863.ctex"]
+source_file="res://resources/CASED/coverBlackButton.png"
+dest_files=["res://.godot/imported/coverBlackButton.png-d2280a67857ad8892bfeb15d47639528.ctex"]
 
 [params]
 

@@ -1,24 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcy3map50mjx2"]
+[gd_scene load_steps=7 format=3 uid="uid://cfg8ftahr0i6w"]
 
-[ext_resource type="Script" path="res://dialouge1.gd" id="1_8421t"]
-[ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="2_7nteb"]
-[ext_resource type="Texture2D" uid="uid://eemfckcixpem" path="res://resources/image1/New folder/整体效果.PNG" id="3_hd22j"]
-[ext_resource type="Texture2D" uid="uid://bwghahh8nldmt" path="res://resources/CASED/CASED.png" id="4_xoiak"]
-[ext_resource type="Texture2D" uid="uid://dpca148kuegle" path="res://resources/CASED/ArtistPigeon.png" id="5_ari1x"]
+[ext_resource type="Script" path="res://dialouge2.gd" id="1_hmciv"]
+[ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="2_yp683"]
+[ext_resource type="Texture2D" uid="uid://b6f6ob2kb6h6f" path="res://resources/pallete/pallete.png" id="3_aeogk"]
+[ext_resource type="Texture2D" uid="uid://ddf6jn0anqx6k" path="res://resources/image1/New folder/损坏画框.PNG" id="4_2nr5s"]
+[ext_resource type="Texture2D" uid="uid://bwghahh8nldmt" path="res://resources/CASED/CASED.png" id="5_r5vg1"]
+[ext_resource type="Texture2D" uid="uid://dpca148kuegle" path="res://resources/CASED/ArtistPigeon.png" id="6_vh0e8"]
 
-[node name="dialouge1" type="Node2D"]
-script = ExtResource("1_8421t")
+[node name="dialouge2" type="Node2D"]
+script = ExtResource("1_hmciv")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(478, 325)
 scale = Vector2(0.453704, 0.269919)
-texture = ExtResource("2_7nteb")
+texture = ExtResource("2_yp683")
 
 [node name="image" type="Sprite2D" parent="."]
-position = Vector2(477, 244)
-scale = Vector2(0.147917, 0.166667)
-texture = ExtResource("3_hd22j")
+position = Vector2(471.557, 247.917)
+scale = Vector2(0.223864, 0.231103)
+texture = ExtResource("3_aeogk")
+
+[node name="frame" type="Sprite2D" parent="."]
+position = Vector2(473.667, 250.957)
+scale = Vector2(0.141049, 0.148003)
+texture = ExtResource("4_2nr5s")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 48.0
@@ -30,7 +36,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
 position = Vector2(434, 52.5)
 scale = Vector2(0.477895, 0.2775)
-texture = ExtResource("4_xoiak")
+texture = ExtResource("5_r5vg1")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -65,6 +71,6 @@ scale = Vector2(0.0356481, 0.0186992)
 [node name="Sprite2D2" type="Sprite2D" parent="Panel"]
 position = Vector2(142, -91)
 scale = Vector2(0.296094, 0.288281)
-texture = ExtResource("5_ari1x")
+texture = ExtResource("6_vh0e8")
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

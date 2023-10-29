@@ -1,60 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
+[gd_scene load_steps=4 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
-[ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_o5a7l"]
-[ext_resource type="Texture2D" uid="uid://dnsacr7ga2bva" path="res://resources/art/purplecolor.jpg" id="3_0hakt"]
-[ext_resource type="Script" path="res://startButton.gd" id="3_udrui"]
+[ext_resource type="Texture2D" uid="uid://dc60wsuv0ypqm" path="res://resources/CASED/cover.png" id="2_k46og"]
+[ext_resource type="Texture2D" uid="uid://dl36c5wd5mxg4" path="res://resources/CASED/coverBlackButton.png" id="3_mlqiy"]
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_qmdot")
 
 [node name="backrgound" type="Sprite2D" parent="."]
-position = Vector2(485.5, 324.5)
-scale = Vector2(0.503052, 0.499256)
-texture = ExtResource("2_o5a7l")
+position = Vector2(476, 329.5)
+scale = Vector2(2.02941, 2.07716)
+texture = ExtResource("2_k46og")
 
 [node name="startButton" type="Button" parent="."]
-offset_left = 251.0
-offset_top = 367.0
-offset_right = 349.0
-offset_bottom = 421.0
+offset_left = 253.0
+offset_top = 363.0
+offset_right = 351.0
+offset_bottom = 417.0
 text = "start"
-script = ExtResource("3_udrui")
-
-[node name="Sprite2D" type="Sprite2D" parent="startButton"]
-position = Vector2(48.5, 25.5)
-scale = Vector2(0.216387, 0.127083)
-texture = ExtResource("3_0hakt")
-
-[node name="Label" type="Label" parent="startButton"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 9.0
-offset_right = 79.0
-offset_bottom = 47.0
-theme_override_font_sizes/font_size = 23
-text = "Start"
-
-[node name="quitButton" type="Button" parent="."]
-offset_left = 252.0
-offset_top = 538.0
-offset_right = 350.0
-offset_bottom = 592.0
-text = "start"
-
-[node name="Sprite2D" type="Sprite2D" parent="quitButton"]
-position = Vector2(48.5, 27.5)
-scale = Vector2(0.216387, 0.135417)
-texture = ExtResource("3_0hakt")
-
-[node name="Label" type="Label" parent="quitButton"]
-layout_mode = 0
-offset_left = 21.0
-offset_top = 9.0
-offset_right = 79.0
-offset_bottom = 47.0
-theme_override_font_sizes/font_size = 23
-text = "Quit"
 
 [node name="creditButton" type="Button" parent="."]
 offset_left = 250.0
@@ -63,22 +26,52 @@ offset_right = 348.0
 offset_bottom = 508.0
 text = "start"
 
-[node name="Sprite2D" type="Sprite2D" parent="creditButton"]
-position = Vector2(50, 25.5)
-scale = Vector2(0.214286, 0.122917)
-texture = ExtResource("3_0hakt")
+[node name="quitButton" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 538.0
+offset_right = 350.0
+offset_bottom = 592.0
+text = "start"
 
-[node name="Label" type="Label" parent="creditButton"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 9.0
-offset_right = 82.0
-offset_bottom = 47.0
+[node name="start" type="Sprite2D" parent="."]
+position = Vector2(413, 375)
+scale = Vector2(0.218278, 0.340741)
+texture = ExtResource("3_mlqiy")
+
+[node name="start2" type="Label" parent="."]
+offset_left = 274.0
+offset_top = 372.0
+offset_right = 332.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 23
+text = "Start"
+
+[node name="start3" type="Sprite2D" parent="."]
+position = Vector2(428, 554)
+scale = Vector2(0.218278, 0.340741)
+texture = ExtResource("3_mlqiy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(431, 468)
+scale = Vector2(0.25042, 0.309607)
+texture = ExtResource("3_mlqiy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 265.0
+offset_top = 463.0
+offset_right = 332.0
+offset_bottom = 501.0
 theme_override_font_sizes/font_size = 23
 text = "Credit"
 
-[connection signal="mouse_entered" from="startButton" to="startButton" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="startButton" to="startButton" method="_on_mouse_exited"]
+[node name="quit2" type="Label" parent="."]
+offset_left = 273.0
+offset_top = 547.0
+offset_right = 331.0
+offset_bottom = 585.0
+theme_override_font_sizes/font_size = 23
+text = "Quit"
+
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="creditButton" to="." method="_on_credit_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
