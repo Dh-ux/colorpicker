@@ -1,76 +1,80 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2vd5gq1br6gl"]
+[gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
 [ext_resource type="Texture2D" uid="uid://dc60wsuv0ypqm" path="res://resources/CASED/cover.png" id="2_k46og"]
 [ext_resource type="Texture2D" uid="uid://dl36c5wd5mxg4" path="res://resources/CASED/coverBlackButton.png" id="3_mlqiy"]
+[ext_resource type="FontFile" uid="uid://7fskqvkcefli" path="res://resources/fonts/PressStart2P.ttf" id="5_wiwsg"]
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_qmdot")
 
 [node name="backrgound" type="Sprite2D" parent="."]
-position = Vector2(476, 329.5)
-scale = Vector2(2.02941, 2.07716)
+position = Vector2(470.694, 326.5)
+scale = Vector2(2.0475, 2.09568)
 texture = ExtResource("2_k46og")
 
 [node name="startButton" type="Button" parent="."]
-offset_left = 253.0
-offset_top = 363.0
-offset_right = 351.0
-offset_bottom = 417.0
+offset_left = 139.0
+offset_top = 302.0
+offset_right = 383.0
+offset_bottom = 364.0
 text = "start"
 
 [node name="creditButton" type="Button" parent="."]
-offset_left = 250.0
-offset_top = 454.0
-offset_right = 348.0
-offset_bottom = 508.0
+offset_left = 167.0
+offset_top = 399.0
+offset_right = 344.0
+offset_bottom = 452.0
 text = "start"
 
 [node name="quitButton" type="Button" parent="."]
-offset_left = 252.0
-offset_top = 538.0
-offset_right = 350.0
-offset_bottom = 592.0
+offset_left = 188.0
+offset_top = 487.0
+offset_right = 319.0
+offset_bottom = 546.0
 text = "start"
 
 [node name="start" type="Sprite2D" parent="."]
-position = Vector2(413, 375)
-scale = Vector2(0.218278, 0.340741)
+position = Vector2(524.5, 305.5)
+scale = Vector2(0.517227, 0.404321)
 texture = ExtResource("3_mlqiy")
 
 [node name="start2" type="Label" parent="."]
-offset_left = 274.0
-offset_top = 372.0
-offset_right = 332.0
-offset_bottom = 410.0
-theme_override_font_sizes/font_size = 23
-text = "Start"
+offset_left = 150.0
+offset_top = 319.0
+offset_right = 381.0
+offset_bottom = 357.0
+theme_override_fonts/font = ExtResource("5_wiwsg")
+theme_override_font_sizes/font_size = 33
+text = "START!!"
 
 [node name="start3" type="Sprite2D" parent="."]
-position = Vector2(428, 554)
-scale = Vector2(0.218278, 0.340741)
+position = Vector2(598, 401)
+scale = Vector2(0.515966, 0.509877)
 texture = ExtResource("3_mlqiy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(431, 468)
-scale = Vector2(0.25042, 0.309607)
+position = Vector2(463, 500.5)
+scale = Vector2(0.407563, 0.289506)
 texture = ExtResource("3_mlqiy")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 265.0
-offset_top = 463.0
-offset_right = 332.0
-offset_bottom = 501.0
-theme_override_font_sizes/font_size = 23
-text = "Credit"
+offset_left = 177.0
+offset_top = 415.0
+offset_right = 333.0
+offset_bottom = 453.0
+theme_override_fonts/font = ExtResource("5_wiwsg")
+theme_override_font_sizes/font_size = 26
+text = "CREDIT"
 
 [node name="quit2" type="Label" parent="."]
-offset_left = 273.0
-offset_top = 547.0
-offset_right = 331.0
-offset_bottom = 585.0
-theme_override_font_sizes/font_size = 23
-text = "Quit"
+offset_left = 203.0
+offset_top = 503.0
+offset_right = 307.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("5_wiwsg")
+theme_override_font_sizes/font_size = 26
+text = "QUIT"
 
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="creditButton" to="." method="_on_credit_button_pressed"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcy3map50mjx2"]
+[gd_scene load_steps=7 format=3 uid="uid://dcy3map50mjx2"]
 
 [ext_resource type="Script" path="res://dialouge1.gd" id="1_8421t"]
 [ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="2_7nteb"]
 [ext_resource type="Texture2D" uid="uid://eemfckcixpem" path="res://resources/image1/New folder/整体效果.PNG" id="3_hd22j"]
 [ext_resource type="Texture2D" uid="uid://bwghahh8nldmt" path="res://resources/CASED/CASED.png" id="4_xoiak"]
+[ext_resource type="FontFile" uid="uid://bey3te2erxerx" path="res://resources/fonts/VonwaonBitmap-16px.ttf" id="5_2uvxy"]
 [ext_resource type="Texture2D" uid="uid://dpca148kuegle" path="res://resources/CASED/ArtistPigeon.png" id="5_ari1x"]
 
 [node name="dialouge1" type="Node2D"]
@@ -28,21 +29,22 @@ offset_bottom = 611.0
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Panel"]
-position = Vector2(434, 52.5)
-scale = Vector2(0.477895, 0.2775)
+position = Vector2(426.5, 39)
+scale = Vector2(0.48579, 0.345)
 texture = ExtResource("4_xoiak")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.253714
-anchor_top = 0.0967742
-anchor_right = 0.249143
-anchor_bottom = 0.0967742
+anchor_left = -0.265143
+anchor_top = -0.150538
+anchor_right = 0.237714
+anchor_bottom = -0.150538
 offset_left = 229.0
 offset_top = 8.0
 offset_right = 654.0
 offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("5_2uvxy")
 theme_override_font_sizes/font_size = 29
 text = "Hello!"
 horizontal_alignment = 1
@@ -63,7 +65,7 @@ position = Vector2(36.5, 21)
 scale = Vector2(0.0356481, 0.0186992)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Panel"]
-position = Vector2(142, -91)
+position = Vector2(142, -115)
 scale = Vector2(0.296094, 0.288281)
 texture = ExtResource("5_ari1x")
 
