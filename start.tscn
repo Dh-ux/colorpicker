@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
+[gd_scene load_steps=6 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
 [ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_o5a7l"]
 [ext_resource type="Texture2D" uid="uid://dnsacr7ga2bva" path="res://resources/art/purplecolor.jpg" id="3_0hakt"]
 [ext_resource type="Script" path="res://startButton.gd" id="3_udrui"]
+[ext_resource type="FontFile" uid="uid://7fskqvkcefli" path="res://resources/fonts/PressStart2P.ttf" id="5_wiwsg"]
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_qmdot")
@@ -28,10 +29,11 @@ texture = ExtResource("3_0hakt")
 
 [node name="Label" type="Label" parent="startButton"]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 9.0
-offset_right = 79.0
-offset_bottom = 47.0
+offset_left = -9.0
+offset_top = 10.0
+offset_right = 106.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("5_wiwsg")
 theme_override_font_sizes/font_size = 23
 text = "Start"
 
@@ -70,10 +72,11 @@ texture = ExtResource("3_0hakt")
 
 [node name="Label" type="Label" parent="creditButton"]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 9.0
-offset_right = 82.0
-offset_bottom = 47.0
+offset_left = -17.0
+offset_top = 12.0
+offset_right = 121.0
+offset_bottom = 50.0
+theme_override_fonts/font = ExtResource("5_wiwsg")
 theme_override_font_sizes/font_size = 23
 text = "Credit"
 
