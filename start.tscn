@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2vd5gq1br6gl"]
+
+[ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
+[ext_resource type="Texture2D" uid="uid://uhnn388br4mk" path="res://resources/image1/New folder/黑背景.PNG" id="2_4mxio"]
+[ext_resource type="Texture2D" uid="uid://dnsacr7ga2bva" path="res://resources/art/purplecolor.jpg" id="3_0hakt"]
+
+[node name="start" type="Node2D"]
+script = ExtResource("1_qmdot")
+
+[node name="backrgound" type="Sprite2D" parent="."]
+position = Vector2(476, 327)
+scale = Vector2(0.459259, 0.274797)
+texture = ExtResource("2_4mxio")
+
+[node name="startButton" type="Button" parent="."]
+offset_left = 418.0
+offset_top = 374.0
+offset_right = 516.0
+offset_bottom = 428.0
+text = "start"
+
+[node name="Sprite2D" type="Sprite2D" parent="startButton"]
+position = Vector2(48.5, 25.5)
+scale = Vector2(0.216387, 0.127083)
+texture = ExtResource("3_0hakt")
+
+[node name="Label" type="Label" parent="startButton"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 9.0
+offset_right = 79.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 23
+text = "Start"
+
+[node name="quitButton" type="Button" parent="."]
+offset_left = 419.0
+offset_top = 549.0
+offset_right = 517.0
+offset_bottom = 603.0
+text = "start"
+
+[node name="Sprite2D" type="Sprite2D" parent="quitButton"]
+position = Vector2(48.5, 27.5)
+scale = Vector2(0.216387, 0.135417)
+texture = ExtResource("3_0hakt")
+
+[node name="Label" type="Label" parent="quitButton"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 9.0
+offset_right = 79.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 23
+text = "Quit"
+
+[node name="creditButton" type="Button" parent="."]
+offset_left = 417.0
+offset_top = 464.0
+offset_right = 515.0
+offset_bottom = 518.0
+text = "start"
+
+[node name="Sprite2D" type="Sprite2D" parent="creditButton"]
+position = Vector2(50, 25.5)
+scale = Vector2(0.214286, 0.122917)
+texture = ExtResource("3_0hakt")
+
+[node name="Label" type="Label" parent="creditButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 82.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 23
+text = "Credit"
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="creditButton" to="." method="_on_credit_button_pressed"]

@@ -5,7 +5,7 @@ extends Node2D
 
 @onready var timer = $Timer
 
-var color_types = ["DarkOrange", "DarkYellow", "DarkPurple", "DarkGreen", "DarkBlue"]
+var color_types = ["DarkOrange", "DarkYellow", "DarkPurple", "DarkGreen", "DarkBlue","BrightOrange","BrightPurple", "BrightGreen","BrightBlue","BrightYellow" ]
 var target_color = "DarkOrange"
 
 var target_button = null
@@ -39,15 +39,26 @@ func on_bar():
 		print(target_color)
 		
 		if target_color == 'DarkOrange':
-			hint_ref.texture = load("res://resources/art/redcolor.jpg")
+			hint_ref.texture = load("res://resources/image1/keys/darkorange.PNG")
 		elif target_color == 'DarkBlue':
-			hint_ref.texture = load("res://resources/art/bluecolor.jpg")
+			hint_ref.texture = load("res://resources/image1/keys/darkblue.PNG")
 		elif target_color == 'DarkGreen':
-			hint_ref.texture = load("res://resources/art/greencolor.jpg")
+			hint_ref.texture = load("res://resources/image1/keys/darkgreen.PNG")
 		elif target_color == 'DarkYellow':
-			hint_ref.texture = load("res://resources/art/yellowcolor.jpg")
+			hint_ref.texture = load("res://resources/image1/keys/darkyellow.PNG")
 		elif target_color == 'DarkPurple':
-			hint_ref.texture = 	load("res://resources/art/purplecolor.jpg")
+			hint_ref.texture = 	load("res://resources/image1/keys/darkpurple.PNG")
+		elif target_color == 'BrightPurple':
+			hint_ref.texture = 	load("res://resources/image1/keys/brightpurple.PNG")
+		elif target_color == 'BrightBlue':
+			hint_ref.texture = 	load("res://resources/image1/keys/brightblue.PNG")	
+		elif target_color == 'BrightGreen':
+			hint_ref.texture = 	load("res://resources/image1/keys/brightgrenn.PNG")	
+		elif target_color == 'BrightYellow':
+			hint_ref.texture = 	load("res://resources/image1/keys/brightyellow.PNG")
+		elif target_color == 'BrightOrange':
+			hint_ref.texture = 	load("res://resources/image1/keys/brightorange.PNG")			
+			
 		
 		hint_ref.visible = true
 		#timer.start(4)
@@ -82,9 +93,19 @@ func color_picked(target):
 		$Node/darkyellow.visible = true
 	elif target_color == 'DarkPurple':
 		$Node/darkpurple.visible = true
+	elif target_color == 'BrightPurple':
+		$Node/brightpurple.visible = true	
+	elif target_color == 'BrightOrange':
+		$Node/brightorange.visible = true	
+	elif target_color == 'BrightYellow':
+		$Node/brightyellow.visible = true	
+	elif target_color == 'BrightBlue':
+		$Node/brightblue.visible = true	
+	elif target_color == 'BrightGreen':
+		$Node/brightgreen.visible = true	
 
 func game_over():
-	pass
+	$OverPanel.visible = true
 
 
 
@@ -110,3 +131,7 @@ func _on_timer_timeout():
 func _on_beat_counter_timeout():
 	beat += 1
 	on_beats()
+
+
+func _on_next_button_pressed():
+	get_tree().change_scene_to_file("res://main2.tscn")

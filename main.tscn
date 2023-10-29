@@ -1,29 +1,27 @@
-[gd_scene load_steps=32 format=3 uid="uid://dc7kntrdvjrki"]
+[gd_scene load_steps=30 format=3 uid="uid://dc7kntrdvjrki"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
-[ext_resource type="Texture2D" uid="uid://epnroesxy6pu" path="res://resources/art/background.png" id="1_vf0al"]
-[ext_resource type="Texture2D" uid="uid://5dygdwtyfvvc" path="res://resources/image1/整体效果.PNG" id="3_fncha"]
-[ext_resource type="Texture2D" uid="uid://6yvu4vmfrtim" path="res://resources/art/redcolor.jpg" id="3_q4my2"]
 [ext_resource type="Texture2D" uid="uid://uhnn388br4mk" path="res://resources/image1/New folder/黑背景.PNG" id="4_qp6l7"]
-[ext_resource type="Texture2D" uid="uid://dt86inci7jx2k" path="res://resources/image1/New folder/before.png" id="4_uyydg"]
 [ext_resource type="Texture2D" uid="uid://ddf6jn0anqx6k" path="res://resources/image1/New folder/损坏画框.PNG" id="5_a8871"]
 [ext_resource type="Texture2D" uid="uid://1dqh6rdmxx3" path="res://resources/image1/New folder/深橙 调色.PNG" id="7_g7tkk"]
-[ext_resource type="Texture2D" uid="uid://dccs6wk0eikq1" path="res://resources/art/yellownocolor.jpg" id="7_gc8oi"]
 [ext_resource type="Texture2D" uid="uid://c3hfi2tew0khq" path="res://resources/image1/New folder/深绿 调色.PNG" id="8_b8pp7"]
-[ext_resource type="Texture2D" uid="uid://dsksxkybxens5" path="res://resources/art/rednocolor.jpg" id="8_nj0dk"]
 [ext_resource type="Script" path="res://picker.gd" id="8_uabh1"]
-[ext_resource type="Texture2D" uid="uid://dqreb2ttnv0ry" path="res://resources/art/bluenocolor.jpg" id="9_523s8"]
 [ext_resource type="Texture2D" uid="uid://2l6555l1p8yn" path="res://resources/image1/New folder/深紫 调色.PNG" id="9_hyo36"]
 [ext_resource type="Texture2D" uid="uid://vkh8hb7oi8re" path="res://resources/image1/New folder/深黄 调色.PNG" id="10_gm3i6"]
-[ext_resource type="Texture2D" uid="uid://ksndxhsdpnm" path="res://resources/art/greennocolor.jpg" id="10_wfatn"]
 [ext_resource type="Texture2D" uid="uid://7vj527ursxij" path="res://resources/image1/New folder/深蓝调色.PNG" id="11_kig2w"]
 [ext_resource type="Texture2D" uid="uid://37ynramerjr" path="res://resources/image1/New folder/浅蓝 调色.PNG" id="12_r1fcj"]
+[ext_resource type="Texture2D" uid="uid://ce5r32f874sii" path="res://resources/image1/New folder/浅绿 调色.PNG" id="13_hqlq3"]
 [ext_resource type="AudioStream" uid="uid://cedtg6yaxxeys" path="res://resources/music/WIppedCreamDemo(1).wav" id="13_vlmkw"]
 [ext_resource type="Script" path="res://Track.gd" id="14_pl441"]
+[ext_resource type="Texture2D" uid="uid://b7uomfglcejja" path="res://resources/image1/New folder/浅橙 调色.PNG" id="14_t6f4m"]
+[ext_resource type="Texture2D" uid="uid://dmfxda7wx0ofx" path="res://resources/image1/New folder/浅黄 调色.PNG" id="15_xr0gw"]
+[ext_resource type="Texture2D" uid="uid://c0bb8kyhlxeef" path="res://resources/image1/New folder/浅紫 调色.PNG" id="16_fauyw"]
 [ext_resource type="Texture2D" uid="uid://y0nhlr7jcllk" path="res://resources/image1/浅蓝.PNG" id="16_irjv1"]
 [ext_resource type="Texture2D" uid="uid://qedbc2bjying" path="res://resources/image1/浅黄.PNG" id="17_rgf48"]
 [ext_resource type="Texture2D" uid="uid://gh075ghcgmn8" path="res://resources/image1/浅橘.PNG" id="18_22hh4"]
 [ext_resource type="Texture2D" uid="uid://bosyojod77gu5" path="res://resources/image1/浅紫.PNG" id="19_2ukjk"]
+[ext_resource type="Texture2D" uid="uid://dk78gi13ueue5" path="res://resources/image1/keys/brightblue.PNG" id="19_epjt8"]
+[ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="19_uabnv"]
 [ext_resource type="Texture2D" uid="uid://c3wfota10fhys" path="res://resources/image1/浅绿.PNG" id="20_8vs30"]
 [ext_resource type="Texture2D" uid="uid://cndawdtat06rl" path="res://resources/image1/深橘.PNG" id="21_pkxp7"]
 [ext_resource type="Texture2D" uid="uid://c05mwvuk03t1g" path="res://resources/image1/深紫.PNG" id="22_cfw0s"]
@@ -37,159 +35,178 @@ script = ExtResource("1_icmpg")
 metadata/_edit_vertical_guides_ = [-155.0]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(602, 328)
-scale = Vector2(4.105, 4.30059)
-texture = ExtResource("1_vf0al")
-
-[node name="color sample" type="Sprite2D" parent="."]
-position = Vector2(1103, 78)
-scale = Vector2(0.0540944, 0.0601716)
-texture = ExtResource("3_fncha")
+modulate = Color(0, 0, 0, 1)
+position = Vector2(478, 325)
+scale = Vector2(0.453704, 0.269919)
+texture = ExtResource("19_uabnv")
 
 [node name="pickers" type="Node" parent="."]
 
 [node name="background" type="Sprite2D" parent="pickers"]
-position = Vector2(333, 285)
-scale = Vector2(0.185764, 0.181707)
+position = Vector2(249, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_qp6l7")
 
 [node name="frame" type="Sprite2D" parent="pickers"]
-position = Vector2(334, 285.5)
-scale = Vector2(0.183333, 0.177642)
+position = Vector2(256, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_a8871")
 
 [node name="darkorange" type="Area2D" parent="pickers"]
-position = Vector2(318, 283)
+position = Vector2(240, 271)
 script = ExtResource("8_uabh1")
 
 [node name="colorblock" type="Sprite2D" parent="pickers/darkorange"]
-position = Vector2(16, 2.14836)
-scale = Vector2(0.183333, 0.178169)
+position = Vector2(16, 3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_g7tkk")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/darkorange"]
 visible = false
-position = Vector2(-139.513, -80)
-scale = Vector2(0.297546, 0.606534)
-polygon = PackedVector2Array(-11.7206, -133.546, 48.7742, -133.546, 72.3, -110.464, 62.2175, -28.0281, 149.599, 4.94611, 186.568, 72.5433, 253.784, 108.815, 290.753, 108.815, 300.836, 85.733, 230.259, 36.2716, 263.867, -1.64874, 300.836, -11.541, 438.63, -1.64874, 485.681, 9.89224, 505.846, 21.4332, 495.763, 64.2997, 468.877, 107.166, 458.794, 168.169, 448.712, 168.169, 431.908, 126.951, 448.712, 77.4894, 421.825, 51.11, 374.774, 56.0562, 357.97, 65.9485, 364.691, 90.6791, 364.691, 113.761, 347.887, 145.087, 284.032, 179.71, 236.98, 189.602, 136.156, 187.953, 68.9391, 174.763, 1.72272, 148.384, -62.1329, 87.3817, -58.772, -107.166)
+position = Vector2(-154.006, -88.9731)
+scale = Vector2(0.326817, 0.676934)
+polygon = PackedVector2Array(-15.2794, -135.947, 58.1563, -134.469, 73.4553, -112.311, 62.2175, -28.0281, 153.011, 7.34653, 183.609, 69.3909, 253.985, 113.708, 290.703, 113.708, 299.882, 90.0724, 235.626, 36.8915, 241.745, 8.82376, 299.882, -10.3805, 434.514, -1.51697, 474.292, 7.34653, 501.83, 32.4597, 489.591, 64.9592, 462.052, 107.799, 455.933, 172.798, 440.634, 155.071, 428.394, 135.867, 446.753, 90.0724, 421.825, 51.11, 376.377, 51.664, 342.719, 67.9137, 364.691, 90.6791, 361.078, 115.186, 348.839, 140.299, 293.762, 174.276, 235.626, 187.571, 131.592, 187.571, 70.3955, 174.276, -15.2794, 134.39, -58.1169, 87.1179, -58.1169, -104.924)
 
 [node name="darkgreen" type="Area2D" parent="pickers"]
-position = Vector2(411, 283)
+position = Vector2(333, 271)
 script = ExtResource("8_uabh1")
 color_type = "DarkGreen"
 
 [node name="colorblock" type="Sprite2D" parent="pickers/darkgreen"]
-position = Vector2(-75.8207, 2.00001)
-scale = Vector2(0.183167, 0.178049)
+position = Vector2(-77, 3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("8_b8pp7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/darkgreen"]
 visible = false
-position = Vector2(71.0001, 142)
-scale = Vector2(0.317995, 1)
-polygon = PackedVector2Array(-644.665, -86, -619.508, -81, -584.916, -73, -575.482, -68, -566.048, -68, -566.048, -55, -575.482, -55, -575.482, -44, -581.771, -44, -644.665, -7, -644.665, 12, -619.508, 31, -578.627, 44, -544.035, 49, -471.706, 49, -283.024, 14, -220.13, 12, -125.789, 43, -116.354, 54, 81.7622, 55, 81.7622, -55, 25.1575, -66, -3.1449, -66, -141.512, -47, -345.918, -7, -349.063, -4, -383.655, -4, -427.681, -15, -443.404, -50, -531.456, -85, -569.192, -89, -625.797, -89)
+position = Vector2(83.1194, 159.099)
+scale = Vector2(0.34329, 1.12934)
+polygon = PackedVector2Array(-652.858, -83.3219, -620.815, -80.6655, -588.772, -72.6963, -580.033, -69.1544, -580.033, -66.498, -580.033, -53.2159, -580.033, -47.0175, -591.685, -36.3919, -632.467, -18.6824, -649.945, -3.62936, -649.945, 12.3091, -635.38, 25.5912, -600.424, 40.6443, -545.077, 50.3845, -475.165, 50.3845, -291.647, 14.9655, -218.822, 14.9655, -140.172, 35.3314, -116.868, 55.6973, 84.1288, 55.6973, 84.1288, -53.2159, 31.6949, -63.8415, -41.1298, -62.0706, -140.172, -45.2466, -236.3, -23.1098, -352.82, -4.51486, -387.776, -4.51486, -437.296, -13.3696, -440.209, -41.7047, -510.121, -76.2381, -568.381, -87.7493, -635.38, -88.6348)
 
 [node name="darkpurple" type="Area2D" parent="pickers"]
-position = Vector2(409, 383)
+position = Vector2(331, 371)
 script = ExtResource("8_uabh1")
 color_type = "DarkPurple"
 
 [node name="colorblock" type="Sprite2D" parent="pickers/darkpurple"]
-position = Vector2(-75, -96.5)
-scale = Vector2(0.184259, 0.177642)
+position = Vector2(-75, -97)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_hyo36")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/darkpurple"]
 visible = false
-position = Vector2(51, -128)
-polygon = PackedVector2Array(-123, -1, -126, 10, -126, 34, -124, 47, -120, 50, -116, 50, -104, 39, -98, 28, -87, 12, -82, 10, -82, 7, -41, 7, -40, 10, -29, 16, -27, 16, -27, 29, -29, 29, -35, 42, -52, 85, -52, 100, -45, 111, -32, 111, -16, 104, 10, 79, 15, 66, 18, 52, 34, 31, 35, 28, 44, 28, 45, 31, 47, 31, 47, -52, 35, -46, 26, -40, 4, -38, -35, -35, -65, -27, -79, -24, -98, -6, -107, 0, -107, 2, -117, 2, -118, -1)
+position = Vector2(62.168, -129.737)
+scale = Vector2(1.0802, 1.09279)
+polygon = PackedVector2Array(-124.206, -2.98563, -126.984, 9.82559, -126.984, 32.7028, -124, 47, -120, 50, -116, 50, -109.394, 43.6838, -101.988, 33.6179, -99.2111, 19.8916, -88.102, 8.91051, -81.6217, 5.25017, -43.6659, 5.25017, -38.1114, 6.16525, -31.6311, 11.6558, -27, 16, -27.0023, 27.2123, -29.7796, 27.2123, -37.1856, 47.3442, -52, 85, -52, 100, -44.5916, 112.315, -32.5569, 112.315, -16, 104, 10, 79, 15, 66, 16.508, 53.7498, 22.9883, 40.9386, 34.0973, 27.2123, 45.2064, 27.2123, 45.2064, 29.9575, 47.9836, 29.9575, 47.9836, -56.0607, 35.0231, -48.74, 25.7655, -43.2495, 3.54749, -41.4193, -28.8539, -38.674, -50.1461, -33.1835, -78.8445, -26.7779, -98.2853, -7.56107, -103.84, -5.7309, -107.543, -1.15546, -118.652, -0.240356, -118.652, -2.98563)
 
 [node name="darkyellow" type="Area2D" parent="pickers"]
-position = Vector2(314, 382)
+position = Vector2(236, 370)
 script = ExtResource("8_uabh1")
 color_type = "DarkYellow"
 
 [node name="colorblock" type="Sprite2D" parent="pickers/darkyellow"]
-position = Vector2(20.6793, -96.3516)
-scale = Vector2(0.18363, 0.17695)
+position = Vector2(20, -96)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_gm3i6")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/darkyellow"]
 visible = false
-position = Vector2(-91, 51)
-polygon = PackedVector2Array(-62, -49, -62, 46, 222, 46, 222, 35, 202, 12, 189, 4, 169, 4, 123, 30, 109, 39, 88, 41, 62, 17, 56, 3, 56, -17, 77, -52, 79, -64, 78, -77, 67, -89, 62, -91, 44, -92, 4, -67, -29, -47, -40, -43, -50, -41)
+position = Vector2(-98.2958, 69.3125)
+scale = Vector2(1.08495, 1.20924)
+polygon = PackedVector2Array(-65.1684, -45.7416, -65.1684, 44.3977, 219.638, 44.3977, 219.638, 34.4742, 200.282, 11.3191, 182.77, 3.8764, 158.806, 6.3573, 123, 30, 107.19, 36.1281, 84.1477, 37.782, 61.1051, 20.4157, 52.8097, 0.568542, 57.4183, -25.0674, 70.3221, -39.9528, 75.8523, -57.3191, 75.8523, -71.3776, 66.6353, -81.3011, 60.1834, -84.609, 43.5927, -85.436, 5.80284, -64.7618, -27.3785, -44.9146, -40.2824, -40.7798, -51.3428, -39.1259)
 
 [node name="darkblue" type="Area2D" parent="pickers"]
-position = Vector2(409, 473)
+position = Vector2(331, 461)
 script = ExtResource("8_uabh1")
 color_type = "DarkBlue"
 
 [node name="colorblock" type="Sprite2D" parent="pickers/darkblue"]
-position = Vector2(-75, -188)
-scale = Vector2(0.183796, 0.177642)
+position = Vector2(-75, -187)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("11_kig2w")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/darkblue"]
 visible = false
-position = Vector2(-1, -1)
-polygon = PackedVector2Array(-247, -216, -245, -216, -242, -208, -234, -192, -223, -176, -217, -173, -198, -160, -190, -157, -160, -155, -159, -158, -150, -160, -126, -187, -123, -201, -121, -213, -126, -222, -127, -230, -118, -238, -105, -238, -101, -235, -96, -221, -95, -206, -98, -192, -101, -192, -101, -181, -104, -170, -115, -159, -142, -146, -153, -130, -169, -113, -191, -96, -214, -83, -225, -80, -235, -80, -248, -88)
+position = Vector2(7.95385, 20.4945)
+scale = Vector2(1.09886, 1.11946)
+polygon = PackedVector2Array(-247.488, -214.83, -244.758, -214.83, -242.938, -207.684, -235.658, -192.498, -229.287, -181.779, -216.547, -171.059, -205.626, -161.233, -187.426, -154.087, -161.945, -154.98, -151.024, -159.447, -138.284, -167.486, -127.363, -185.352, -123, -201, -123.723, -212.151, -127.363, -220.19, -127.363, -228.23, -119.173, -236.269, -105.522, -236.269, -100.062, -228.23, -97.332, -220.19, -97.332, -204.111, -100.062, -190.712, -102.792, -190.712, -102.792, -180.885, -106.432, -168.379, -116.443, -159.447, -142.834, -146.941, -155.574, -129.075, -169, -113, -191, -96, -214.727, -80.8374, -225.647, -78.1576, -236.568, -78.1576, -247.488, -86.1972)
+
+[node name="brightblue" type="Area2D" parent="pickers"]
+position = Vector2(331, 461)
+script = ExtResource("8_uabh1")
+color_type = "BrightBlue"
+
+[node name="colorblock" type="Sprite2D" parent="pickers/brightblue"]
+position = Vector2(-75, -187)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_r1fcj")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/brightblue"]
+visible = false
+position = Vector2(189, -142)
+polygon = PackedVector2Array(-186, -264, -196, -227, -205, -208, -225, -181, -249, -147, -246, -132, -246, -120, -261, -92, -261, -81, -255, -78, -243, -78, -213, -105, -184, -113, -157, -119, -99, -123, -75, -138, -75, -264)
 
 [node name="brightgreen" type="Area2D" parent="pickers"]
-position = Vector2(409, 473)
+position = Vector2(331, 461)
 script = ExtResource("8_uabh1")
-color_type = "DarkBlue"
+color_type = "BrightGreen"
 
 [node name="colorblock" type="Sprite2D" parent="pickers/brightgreen"]
 position = Vector2(-75, -187)
-scale = Vector2(0.183796, 0.177642)
-texture = ExtResource("12_r1fcj")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_hqlq3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/brightgreen"]
 visible = false
-position = Vector2(189, -142)
-polygon = PackedVector2Array(-193, -240, -196, -227, -203, -206, -223, -178, -248, -141, -251, -127, -247, -113, -261, -87, -261, -78, -256, -73, -245, -74, -218, -98, -182, -106, -133, -111, -112, -115, -91, -126, -90, -239)
+position = Vector2(3.04168, 29.772)
+scale = Vector2(1.06944, 1.14011)
+polygon = PackedVector2Array(-249.701, -382.219, -249.701, -333.101, -233.805, -350.643, -216.039, -350.643, -213, -337, -210.429, -316.436, -213.234, -316.436, -213.234, -287.492, -206.688, -278.72, -187.987, -267.318, -181.442, -244.513, -174.896, -225.217, -155.26, -203.289, -144.039, -203.289, -138, -206, -138, -218, -157.13, -248.022, -156.195, -266.441, -131.883, -278.72, -143.104, -296.263, -132.818, -323.453, -69, -382)
 
-[node name="Before" type="Sprite2D" parent="."]
-position = Vector2(1077, 541)
-scale = Vector2(0.0722656, 0.0829522)
-texture = ExtResource("4_uyydg")
+[node name="brightyellow" type="Area2D" parent="pickers"]
+position = Vector2(331, 461)
+script = ExtResource("8_uabh1")
+color_type = "BrightYellow"
 
-[node name="Node2" type="Node" parent="."]
+[node name="colorblock" type="Sprite2D" parent="pickers/brightyellow"]
+position = Vector2(-75, -187)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("15_xr0gw")
 
-[node name="block1" type="Sprite2D" parent="Node2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/brightyellow"]
 visible = false
-position = Vector2(971.051, 393.751)
-scale = Vector2(0.187631, 0.179916)
-texture = ExtResource("7_gc8oi")
+polygon = PackedVector2Array(-71, -406, -137, -344, -150, -313, -150, -300, -135, -284, -93, -274, -84, -262, -87, -235, -96, -207, -96, -161, -82, -122, -72, -109, -57, -109, -51, -118, -51, -133, -66, -166, -72, -184, -75, -211, -72, -211, -66, -239, -54, -262, -54, -274, -59, -283, -36, -320, -8, -361, 3, -394, 3, -406)
 
-[node name="block2" type="Sprite2D" parent="Node2"]
-visible = false
-position = Vector2(1056.05, 392.751)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("8_nj0dk")
+[node name="brightpurple" type="Area2D" parent="pickers"]
+position = Vector2(331, 461)
+script = ExtResource("8_uabh1")
+color_type = "BrightPurple"
 
-[node name="block3" type="Sprite2D" parent="Node2"]
-visible = false
-position = Vector2(970.051, 477.751)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("9_523s8")
+[node name="colorblock" type="Sprite2D" parent="pickers/brightpurple"]
+position = Vector2(-75, -187)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("16_fauyw")
 
-[node name="block4" type="Sprite2D" parent="Node2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/brightpurple"]
 visible = false
-position = Vector2(1056.05, 478.751)
-scale = Vector2(0.182786, 0.179675)
-texture = ExtResource("10_wfatn")
+polygon = PackedVector2Array(114, -189, 99, -190, 84, -176, 75, -149, 46, -109, 27, -101, 15, -97, 9, -110, 6, -127, 9, -127, 30, -184, 34, -206, 18, -214, -2, -214, -4, -210, 2, -211, 11, -198, 3, -171, -3, -166, -19, -145, -25, -121, -25, -89, -21, -87, -21, -63, -48, -36, -48, -33, -36, -34, 21, -67, 57, -91, 84, -100, 96, -100, 114, -90)
+
+[node name="brightorange" type="Area2D" parent="pickers"]
+position = Vector2(331, 461)
+script = ExtResource("8_uabh1")
+color_type = "BrightOrange"
+
+[node name="colorblock" type="Sprite2D" parent="pickers/brightorange"]
+position = Vector2(-75, -187)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_t6f4m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pickers/brightorange"]
+visible = false
+position = Vector2(3.12041, 27.0207)
+scale = Vector2(1.01342, 1.16242)
+polygon = PackedVector2Array(-134.318, -156.588, -153.067, -146.264, -185.63, -109.273, -140, -129, -133.331, -134.221, -122.477, -135.081, -97.808, -127.338, -84.9802, -110.993, -70, -89, -69.192, -87.7657, -69.192, -62.8178, -56, -54, -45, -54, -24.7878, -74.8616, -23.8011, -98.089, -26.7614, -99.8096, -26.7614, -127.338, -22.8143, -127.338, -15.907, -154.867, -0.118835, -166.051, 8.76199, -187.557, 6.78848, -197.881, -3, -209, -9, -209, -9, -211, -31, -211, -31, -208, -36, -208, -47, -198, -50, -190, -58, -176, -68.2053, -165.19, -59, -144, -56, -139, -53, -139, -53, -126, -56, -125, -58, -120, -59, -117, -72, -117, -85.9669, -138.522, -96.8213, -161.749, -103.729, -181.536, -108.662, -179.815, -116, -164)
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="hint" type="Node2D" parent="."]
-visible = false
-position = Vector2(67, 58)
-
-[node name="Sprite2D" type="Sprite2D" parent="hint"]
-position = Vector2(12, -34)
-scale = Vector2(0.0681342, 0.0669456)
-texture = ExtResource("3_q4my2")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_vlmkw")
@@ -199,7 +216,7 @@ autoplay = true
 wait_time = 0.5
 
 [node name="Track" type="Node2D" parent="."]
-position = Vector2(279, 32)
+position = Vector2(481, 598)
 scale = Vector2(1, 0.996812)
 script = ExtResource("14_pl441")
 
@@ -232,9 +249,8 @@ color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(0, -12, -12.0286, 0, 0, 12, 11.321, 0.696903)
 
 [node name="hint" type="Sprite2D" parent="Track/key"]
-rotation = -0.818901
-scale = Vector2(0.0303684, 0.03)
-texture = ExtResource("3_q4my2")
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("19_epjt8")
 
 [node name="target" type="Node2D" parent="Track"]
 position = Vector2(150, 0)
@@ -256,70 +272,106 @@ polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
 
 [node name="Node" type="Node" parent="."]
 
+[node name="back" type="Sprite2D" parent="Node"]
+modulate = Color(0.960784, 0.972549, 0.921569, 1)
+position = Vector2(707, 279)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("19_uabnv")
+
 [node name="brightblue" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("16_irjv1")
 
 [node name="brightyellow" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("17_rgf48")
 
 [node name="brightorange" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("18_22hh4")
 
 [node name="brightpurple" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("19_2ukjk")
 
 [node name="brightgreen" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("20_8vs30")
 
 [node name="darkorange" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("21_pkxp7")
 
 [node name="darkpurple" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("22_cfw0s")
 
 [node name="darkgreen" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("23_gkprc")
 
 [node name="darkblue" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("24_m40it")
 
 [node name="darkyellow" type="Sprite2D" parent="Node"]
 visible = false
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("25_wx1xh")
 
 [node name="frame" type="Sprite2D" parent="Node"]
-position = Vector2(810, 289.5)
-scale = Vector2(0.15, 0.15)
+position = Vector2(704, 274)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("26_bu2i7")
+
+[node name="OverPanel" type="Panel" parent="."]
+visible = false
+offset_left = 32.0
+offset_top = 538.0
+offset_right = 917.0
+offset_bottom = 638.0
+
+[node name="Sprite2D" type="Sprite2D" parent="OverPanel"]
+position = Vector2(441.5, 48)
+scale = Vector2(0.414352, 0.0357724)
+texture = ExtResource("19_uabnv")
+
+[node name="Label" type="Label" parent="OverPanel"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 28.0
+offset_right = 482.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 27
+text = "Finish!"
+
+[node name="nextButton" type="Button" parent="OverPanel"]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 49.0
+offset_right = 875.0
+offset_bottom = 83.0
+text = ">>"
 
 [connection signal="input_event" from="pickers/darkorange" to="pickers/darkorange" method="_on_input_event"]
 [connection signal="mouse_entered" from="pickers/darkorange" to="pickers/darkorange" method="_on_mouse_entered"]
@@ -341,9 +393,26 @@ texture = ExtResource("26_bu2i7")
 [connection signal="mouse_entered" from="pickers/darkblue" to="pickers/darkblue" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="pickers/darkblue" to="pickers/darkblue" method="_on_mouse_exited"]
 [connection signal="ready" from="pickers/darkblue" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="pickers/brightblue" to="pickers/brightblue" method="_on_input_event"]
+[connection signal="mouse_entered" from="pickers/brightblue" to="pickers/brightblue" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pickers/brightblue" to="pickers/brightblue" method="_on_mouse_exited"]
+[connection signal="ready" from="pickers/brightblue" to="." method="_on_picker_1_ready"]
 [connection signal="input_event" from="pickers/brightgreen" to="pickers/brightgreen" method="_on_input_event"]
 [connection signal="mouse_entered" from="pickers/brightgreen" to="pickers/brightgreen" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="pickers/brightgreen" to="pickers/brightgreen" method="_on_mouse_exited"]
 [connection signal="ready" from="pickers/brightgreen" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="pickers/brightyellow" to="pickers/brightyellow" method="_on_input_event"]
+[connection signal="mouse_entered" from="pickers/brightyellow" to="pickers/brightyellow" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pickers/brightyellow" to="pickers/brightyellow" method="_on_mouse_exited"]
+[connection signal="ready" from="pickers/brightyellow" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="pickers/brightpurple" to="pickers/brightpurple" method="_on_input_event"]
+[connection signal="mouse_entered" from="pickers/brightpurple" to="pickers/brightpurple" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pickers/brightpurple" to="pickers/brightpurple" method="_on_mouse_exited"]
+[connection signal="ready" from="pickers/brightpurple" to="." method="_on_picker_1_ready"]
+[connection signal="input_event" from="pickers/brightorange" to="pickers/brightorange" method="_on_input_event"]
+[connection signal="mouse_entered" from="pickers/brightorange" to="pickers/brightorange" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pickers/brightorange" to="pickers/brightorange" method="_on_mouse_exited"]
+[connection signal="ready" from="pickers/brightorange" to="." method="_on_picker_1_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="BeatCounter" to="." method="_on_beat_counter_timeout"]
+[connection signal="pressed" from="OverPanel/nextButton" to="." method="_on_next_button_pressed"]
