@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pci1svk6upvg"
-path="res://.godot/imported/darkgreen.PNG-e4a44df89692bf8af76b6bef5da39523.ctex"
+uid="uid://bjf78ejbo8tvc"
+path="res://.godot/imported/lightgreen.PNG-17210654805f9f7e289028f2fa1dcca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/image2key/darkgreen.PNG"
-dest_files=["res://.godot/imported/darkgreen.PNG-e4a44df89692bf8af76b6bef5da39523.ctex"]
+source_file="res://resources/画2 key 小精灵/lightgreen.PNG"
+dest_files=["res://.godot/imported/lightgreen.PNG-17210654805f9f7e289028f2fa1dcca7.ctex"]
 
 [params]
 

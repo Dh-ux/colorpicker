@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr43yixi6x6lx"
-path="res://.godot/imported/blue.PNG-5d29641e639715060f0741ea6c0c8686.ctex"
+uid="uid://drt2t3ql8tb4o"
+path="res://.godot/imported/darkblue.PNG-358f7a2ec1fc55e03b28e7e4b75c10c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/image2key/blue.PNG"
-dest_files=["res://.godot/imported/blue.PNG-5d29641e639715060f0741ea6c0c8686.ctex"]
+source_file="res://resources/画2 key 小精灵/darkblue.PNG"
+dest_files=["res://.godot/imported/darkblue.PNG-358f7a2ec1fc55e03b28e7e4b75c10c3.ctex"]
 
 [params]
 
