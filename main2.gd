@@ -90,7 +90,7 @@ func timeout():
 
 func color_picked(target):
 	#target.get_node('color_block').hide()
-	
+	$Track.reset()
 	if target_color == 'red':
 		$Node/red.visible = true
 	elif target_color == 'darkblue':

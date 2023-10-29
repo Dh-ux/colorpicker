@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://csekcbl1mqwjn"]
+[gd_scene load_steps=34 format=3 uid="uid://csekcbl1mqwjn"]
 
 [ext_resource type="Script" path="res://main2.gd" id="1_eu07w"]
 [ext_resource type="Texture2D" uid="uid://cc2br2p0bbkmg" path="res://resources/image1/New folder/白背景.PNG" id="1_w3y7p"]
@@ -15,10 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://cyg52gw30gfn5" path="res://resources/pallete/palleteYellow.png" id="13_88gja"]
 [ext_resource type="Texture2D" uid="uid://dau05x6sdxr6l" path="res://resources/pallete/palleteWhite.png" id="14_cfhgi"]
 [ext_resource type="Texture2D" uid="uid://nnvu5bbg1hqe" path="res://resources/pallete/palleteLIghtRed.png" id="15_qtdjc"]
-[ext_resource type="Script" path="res://Track.gd" id="16_ebqy2"]
 [ext_resource type="Texture2D" uid="uid://c6rge5lrcqn42" path="res://resources/pallete/palleteLightGreen.png" id="16_y87gj"]
-[ext_resource type="Texture2D" uid="uid://dk78gi13ueue5" path="res://resources/image1/keys/brightblue.PNG" id="17_7astq"]
 [ext_resource type="Texture2D" uid="uid://by3yb7xp4f4iv" path="res://resources/pallete/palleteBrown.png" id="17_j4flb"]
+[ext_resource type="PackedScene" uid="uid://b8pur6ujk7626" path="res://track.tscn" id="18_78on2"]
 [ext_resource type="AudioStream" uid="uid://j8w1v5jieayx" path="res://resources/music/FunintheSunDemo.wav" id="18_603px"]
 [ext_resource type="Texture2D" uid="uid://dyremqqx27lt1" path="res://resources/macaw/macaw-green.png" id="21_n7dfc"]
 [ext_resource type="Texture2D" uid="uid://m7sn0vkekx5g" path="res://resources/macaw/macaw-darkGreen.png" id="22_r0whu"]
@@ -237,67 +236,14 @@ polygon = PackedVector2Array(-98.3333, -342.5, -97.5, -231.667, -90, -231.667, -
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="Track" parent="." instance=ExtResource("18_78on2")]
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_603px")
 autoplay = true
 
 [node name="BeatCounter" type="Timer" parent="."]
 wait_time = 0.5
-
-[node name="Track" type="Node2D" parent="."]
-position = Vector2(481, 598)
-scale = Vector2(1, 0.996812)
-script = ExtResource("16_ebqy2")
-
-[node name="Polygon2D2" type="Polygon2D" parent="Track"]
-position = Vector2(-200, 0)
-rotation = 1.5708
-scale = Vector2(0.915619, -0.668098)
-color = Color(0.992157, 0.992157, 0.992157, 1)
-polygon = PackedVector2Array(-24, -7, 0.443245, -6.99976, 24, -7, 32, 0, 24, 7, 6.55653, 7, -24, 7, -32, 0)
-
-[node name="Line2D" type="Line2D" parent="Track"]
-points = PackedVector2Array(-220, 0, 220, 0)
-width = 8.0
-joint_mode = 1
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="key" type="Node2D" parent="Track"]
-position = Vector2(-200, 0)
-scale = Vector2(1.38036, 1.39864)
-
-[node name="base" type="Polygon2D" parent="Track/key"]
-position = Vector2(-0.159991, -0.206191)
-scale = Vector2(1.08185, 1.08927)
-polygon = PackedVector2Array(-0.435764, -11.1818, -11.7656, 0, 0.435764, 12.042, 12.2014, 0)
-
-[node name="colorhint" type="Polygon2D" parent="Track/key"]
-scale = Vector2(0.615865, 0.617116)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(0, -12, -12.0286, 0, 0, 12, 11.321, 0.696903)
-
-[node name="hint" type="Sprite2D" parent="Track/key"]
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("17_7astq")
-
-[node name="target" type="Node2D" parent="Track"]
-position = Vector2(150, 0)
-
-[node name="Polygon2D2" type="Polygon2D" parent="Track/target"]
-rotation = 1.5708
-scale = Vector2(0.663799, 0.0958624)
-color = Color(0.992157, 0.992157, 0.992157, 1)
-polygon = PackedVector2Array(-24, -7, 0.443245, -6.99976, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
-
-[node name="Polygon2D" type="Polygon2D" parent="Track/target"]
-color = Color(0.913725, 0.913725, 0.913725, 1)
-polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
-
-[node name="Polygon2D" type="Polygon2D" parent="Track/target/Polygon2D"]
-scale = Vector2(0.807983, 0.807983)
-color = Color(1, 0.854902, 0.701961, 1)
-polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
 
 [node name="Node" type="Node" parent="."]
 

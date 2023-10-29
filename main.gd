@@ -12,13 +12,14 @@ var target_button = null
 
 var beat = 0
 var internal_beat = 0
-var beat_speed = 0.5
+@export var inital_blank = 4.6
+@export var beat_speed = 0.5
 var started = false
 
 var hint_ref
 
 func _ready():
-	timer.start(4.6) 
+	timer.start(inital_blank) 
 	hint_ref = $Track/key/hint
 	
 func on_beats():
@@ -64,7 +65,7 @@ func on_bar():
 		#timer.start(4)
 	else:
 		hint_ref.visible = false
-		$Track.reset()
+		$Track.stop()
 		game_over()
 
 func create_key():
@@ -82,7 +83,7 @@ func _timeout():
 
 func color_picked(target):
 	#target.get_node('color_block').hide()
-	
+	$Track.reset()
 	if target_color == 'DarkOrange':
 		$Node/darkorange.visible = true
 	elif target_color == 'DarkBlue':
