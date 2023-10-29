@@ -1,15 +1,24 @@
 extends Node2D
 
-
+var dialogues = ['Hello, I am idiot','Next step','Start Game!','add new lines here']
+var d_index = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	update_text(dialogues[d_index])
+	d_index = 1
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func update_text(text = "error"):
+	$Panel/Label.set_text(text)
+	
+	$Panel/Label.visible_ratio = 0
+	var tween = create_tween()
+	tween.tween_property($Panel/Label, "visible_ratio", 1, 1)
+	#tween.set_trans(Tween.TRANS_CUBIC)
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://main.tscn")
+	if d_index < dialogues.size():
+		update_text(dialogues[d_index])
+		d_index += 1
+	else:
+		get_tree().change_scene_to_file("res://main.tscn")

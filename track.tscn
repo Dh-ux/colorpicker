@@ -31,7 +31,6 @@ end_cap_mode = 2
 
 [node name="ColorParticle" parent="." instance=ExtResource("3_210yy")]
 position = Vector2(-200, -1.00317)
-scale = Vector2(0.64964, 0.64964)
 
 [node name="key" type="Node2D" parent="."]
 position = Vector2(-200, 0)
@@ -72,7 +71,6 @@ polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
 
 [node name="StartParticle2" parent="." instance=ExtResource("3_210yy")]
 position = Vector2(-200, -1.00317)
-scale = Vector2(0.64964, 0.64964)
 amount = 20
 lifetime = 0.5
 explosiveness = 0.98
