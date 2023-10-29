@@ -12,9 +12,12 @@ var target_button = null
 
 var beat = 0
 var internal_beat = 0
-var beat_speed = 0.5
 var started = false
+@export var inital_blank = 4.7
+var beat_speed = 60.0/113.0
 
+
+var confetti = preload("res://resources/vfx/confetti.tscn")
 var hint_ref
 
 func _ready():
@@ -64,21 +67,24 @@ func on_bar():
 		elif target_color == 'lightgreen':
 			hint_ref.texture = 	load("res://resources/image1/keys/brightorange.PNG")
 		elif target_color == 'brightred':
-			hint_ref.texture = 	load("res://resources/image1/keys/brightorange.PNG")					
-			
+			hint_ref.texture = 	load("res://resources/image1/keys/brightorange.PNG")
+
 		
 		hint_ref.visible = true
 		#timer.start(4)
 	else:
+		var c = confetti.instantiate()
+		add_child(c)
+		c.set_position($Background.get_position())
 		hint_ref.visible = false
 		$Track.reset()
+		$BeatCounter.stop()
 		game_over()
 
 func create_key():
 	pass
 
 func timeout():
-	print("20")
 	if not started:
 		started = true
 		on_beats()

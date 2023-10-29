@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8pur6ujk7626"]
+[gd_scene load_steps=5 format=3 uid="uid://b8pur6ujk7626"]
 
 [ext_resource type="Script" path="res://Track.gd" id="1_m3k46"]
 [ext_resource type="Script" path="res://key.gd" id="2_86lri"]
 [ext_resource type="Texture2D" uid="uid://dk78gi13ueue5" path="res://resources/image1/keys/brightblue.PNG" id="3_0roah"]
+[ext_resource type="PackedScene" uid="uid://bxhkxrk0ahk74" path="res://resources/vfx/color_particle.tscn" id="3_210yy"]
 
 [node name="Track" type="Node2D"]
 position = Vector2(481, 598)
@@ -27,6 +28,10 @@ width = 8.0
 joint_mode = 1
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="ColorParticle" parent="." instance=ExtResource("3_210yy")]
+position = Vector2(-200, -1.00317)
+scale = Vector2(0.64964, 0.64964)
 
 [node name="key" type="Node2D" parent="."]
 position = Vector2(-200, 0)
@@ -64,3 +69,12 @@ polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
 scale = Vector2(0.807983, 0.807983)
 color = Color(1, 0.854902, 0.701961, 1)
 polygon = PackedVector2Array(-24, -7, 24, -7, 32, 0, 24, 7, -24, 7, -32, 0)
+
+[node name="StartParticle2" parent="." instance=ExtResource("3_210yy")]
+position = Vector2(-200, -1.00317)
+scale = Vector2(0.64964, 0.64964)
+amount = 20
+lifetime = 0.5
+explosiveness = 0.98
+lifetime_randomness = 0.09
+scale_amount_max = 0.25

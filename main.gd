@@ -7,7 +7,7 @@ extends Node2D
 
 var color_types = ["DarkOrange", "DarkYellow", "DarkPurple", "DarkGreen", "DarkBlue","BrightOrange","BrightPurple", "BrightGreen","BrightBlue","BrightYellow" ]
 var target_color = "DarkOrange"
-
+var color_track = color_types.duplicate()
 var target_button = null
 
 var beat = 0
@@ -15,6 +15,8 @@ var internal_beat = 0
 @export var inital_blank = 4.6
 @export var beat_speed = 0.5
 var started = false
+
+var confetti = preload("res://resources/vfx/confetti.tscn")
 
 var hint_ref
 
@@ -64,9 +66,16 @@ func on_bar():
 		hint_ref.visible = true
 		#timer.start(4)
 	else:
-		hint_ref.visible = false
-		$Track.stop()
-		game_over()
+		#if color_track.size() == 0:
+			var c = confetti.instantiate()
+			add_child(c)
+			c.set_position($Background.get_position())
+			hint_ref.visible = false
+			$Track.stop()
+			game_over()
+
+			
+			
 
 func create_key():
 	pass
@@ -83,6 +92,7 @@ func _timeout():
 
 func color_picked(target):
 	#target.get_node('color_block').hide()
+	color_track.erase(target.color_type)
 	$Track.reset()
 	if target_color == 'DarkOrange':
 		$Node/darkorange.visible = true

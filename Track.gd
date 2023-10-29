@@ -9,6 +9,8 @@ func start():
 	enabled = true
 	$key.position = Vector2(-200,0)
 	$key.pop()
+	$StartParticle2.set_position($key.get_position())
+	$StartParticle2.set_emitting(true)
 
 func _process(delta):
 	if enabled:
@@ -19,5 +21,7 @@ func stop():
 
 func reset():
 	enabled = false
+	$ColorParticle.set_position($key.get_position())
+	$ColorParticle.set_emitting(true)
 	$key.explode()
 	#$key.position = Vector2(-200,0)

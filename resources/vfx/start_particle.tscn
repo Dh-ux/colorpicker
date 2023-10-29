@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://fglnx1e6utut"]
+
+[ext_resource type="Texture2D" uid="uid://gqw2bq0hwl6i" path="res://resources/vfx/spot.png" id="1_8h4c4"]
+[ext_resource type="Script" path="res://resources/vfx/start_particle.gd" id="1_ex0o8"]
+
+[sub_resource type="Curve" id="Curve_k07b5"]
+_data = [Vector2(0.135987, 0), 0.0, 5.9175, 0, 0, Vector2(0.290216, 0.992883), 0.0, 0.0, 0, 0, Vector2(0.810945, 0.957295), -0.175176, -0.175176, 0, 0, Vector2(1, 0), -8.09592, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_bcycj"]
+offsets = PackedFloat32Array(0, 0.302326, 0.649374, 1)
+colors = PackedColorArray(0.998068, 0, 0.0888021, 1, 0.932003, 0.676835, 0.104848, 1, 0, 0.810223, 0.917701, 1, 0.963152, 1.92523e-07, 0.544314, 1)
+
+[node name="StartParticle" type="CPUParticles2D"]
+scale = Vector2(0.64964, 0.64964)
+emitting = false
+amount = 20
+lifetime = 0.8
+one_shot = true
+explosiveness = 0.95
+lifetime_randomness = 0.46
+local_coords = true
+texture = ExtResource("1_8h4c4")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 700.0
+initial_velocity_max = 720.0
+linear_accel_min = -600.0
+linear_accel_max = -600.0
+scale_amount_min = 0.1
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_k07b5")
+color = Color(2, 2, 2, 1)
+color_initial_ramp = SubResource("Gradient_bcycj")
+script = ExtResource("1_ex0o8")

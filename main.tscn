@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dc7kntrdvjrki"]
+[gd_scene load_steps=30 format=3 uid="uid://dc7kntrdvjrki"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_icmpg"]
 [ext_resource type="Texture2D" uid="uid://uhnn388br4mk" path="res://resources/image1/New folder/黑背景.PNG" id="4_qp6l7"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://bh36l5womjsjx" path="res://resources/image1/深蓝.PNG" id="24_m40it"]
 [ext_resource type="Texture2D" uid="uid://cqlj7nhy7r3c7" path="res://resources/image1/深黄.PNG" id="25_wx1xh"]
 [ext_resource type="Texture2D" uid="uid://b76m6q86begn3" path="res://resources/image1/画框.PNG" id="26_bu2i7"]
+[ext_resource type="PackedScene" uid="uid://fglnx1e6utut" path="res://resources/vfx/start_particle.tscn" id="29_vbvak"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_icmpg")
@@ -318,6 +319,15 @@ offset_top = 49.0
 offset_right = 875.0
 offset_bottom = 83.0
 text = ">>"
+
+[node name="StartParticle" parent="." instance=ExtResource("29_vbvak")]
+z_index = 1
+position = Vector2(239, 271)
+lifetime = 0.9
+initial_velocity_min = 900.0
+initial_velocity_max = 920.0
+scale_amount_min = 0.15
+scale_amount_max = 0.3
 
 [connection signal="input_event" from="pickers/darkorange" to="pickers/darkorange" method="_on_input_event"]
 [connection signal="mouse_entered" from="pickers/darkorange" to="pickers/darkorange" method="_on_mouse_entered"]

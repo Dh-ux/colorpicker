@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj2otwy1pfclg"]
+
+[ext_resource type="Script" path="res://resources/vfx/confetti.gd" id="1_4c16j"]
+[ext_resource type="AudioStream" uid="uid://c7agepe500252" path="res://resources/vfx/Confetti.wav" id="2_th4cu"]
+
+[sub_resource type="Curve" id="Curve_0oxd1"]
+min_value = 0.1
+_data = [Vector2(0, 0.1), 0.0, 19.7589, 0, 0, Vector2(0.111111, 1), 0.0, 0.0, 0, 0, Vector2(0.278607, 0.116014), -7.27742, 7.03858, 0, 0, Vector2(0.442786, 1), 0.0, 0.0, 0, 0, Vector2(0.61194, 0.1), -6.86691, 5.97788, 0, 0, Vector2(0.754561, 1), 0.0, 0.0, 0, 0, Vector2(0.920398, 0.1), -6.1882, 0.0, 0, 0, Vector2(0.995025, 1), 0.0, 0.0, 0, 0]
+point_count = 8
+
+[sub_resource type="Gradient" id="Gradient_8feja"]
+offsets = PackedFloat32Array(0, 0.332737, 0.651163, 0.969589)
+colors = PackedColorArray(0.972549, 0.054902, 0, 1, 1, 0.933333, 0.117647, 1, 0, 0.900687, 0.82055, 1, 0.980392, 0.192157, 1, 1)
+
+[node name="Confetti" type="CPUParticles2D"]
+process_mode = 3
+z_index = 2
+position = Vector2(-1, -271)
+scale = Vector2(0.296876, 0.296876)
+emitting = false
+amount = 30
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.95
+randomness = 0.31
+lifetime_randomness = 0.5
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, 1200)
+initial_velocity_min = 1600.0
+initial_velocity_max = 3000.0
+angular_velocity_min = -60.0
+angular_velocity_max = 60.0
+orbit_velocity_min = -0.05
+orbit_velocity_max = 0.05
+damping_min = 3.955
+damping_max = 13.274
+scale_amount_min = 15.0
+scale_amount_max = 20.0
+split_scale = true
+scale_curve_x = SubResource("Curve_0oxd1")
+scale_curve_y = null
+color_initial_ramp = SubResource("Gradient_8feja")
+script = ExtResource("1_4c16j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_th4cu")
+autoplay = true

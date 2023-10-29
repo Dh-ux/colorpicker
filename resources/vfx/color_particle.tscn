@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxhkxrk0ahk74"]
+
+[ext_resource type="Texture2D" uid="uid://gqw2bq0hwl6i" path="res://resources/vfx/spot.png" id="1_n2up7"]
+
+[sub_resource type="Curve" id="Curve_k07b5"]
+_data = [Vector2(0.135987, 0), 0.0, 5.9175, 0, 0, Vector2(0.290216, 0.992883), 0.0, 0.0, 0, 0, Vector2(0.810945, 0.957295), -0.175176, -0.175176, 0, 0, Vector2(1, 0), -8.09592, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_tbta5"]
+offsets = PackedFloat32Array(0, 0.642384, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.866667, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_bcycj"]
+offsets = PackedFloat32Array(0, 0.302326, 0.649374, 1)
+colors = PackedColorArray(0.998068, 0, 0.0888021, 1, 0.932003, 0.676835, 0.104848, 1, 0, 0.810223, 0.917701, 1, 0.963152, 1.92523e-07, 0.544314, 1)
+
+[node name="StartParticle" type="CPUParticles2D"]
+position = Vector2(0, -1)
+scale = Vector2(0.64964, 0.64964)
+emitting = false
+amount = 12
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.95
+lifetime_randomness = 0.14
+local_coords = true
+texture = ExtResource("1_n2up7")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 260.0
+initial_velocity_max = 300.0
+damping_min = 3.0
+damping_max = 3.0
+scale_amount_min = 0.12
+scale_amount_max = 0.2
+scale_amount_curve = SubResource("Curve_k07b5")
+color = Color(2, 2, 2, 1)
+color_ramp = SubResource("Gradient_tbta5")
+color_initial_ramp = SubResource("Gradient_bcycj")
