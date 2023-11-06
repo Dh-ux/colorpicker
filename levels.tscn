@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd82t2kpk8jxx"]
+
+[ext_resource type="Script" path="res://levels.gd" id="1_8h5dj"]
+[ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_7mr6m"]
+[ext_resource type="FontFile" uid="uid://7fskqvkcefli" path="res://resources/fonts/PressStart2P.ttf" id="3_3heml"]
+
+[node name="levels" type="Node2D"]
+script = ExtResource("1_8h5dj")
+
+[node name="back" type="Sprite2D" parent="."]
+position = Vector2(495, 325)
+scale = Vector2(0.568667, 0.539435)
+texture = ExtResource("2_7mr6m")
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 83.0
+offset_top = 229.0
+offset_right = 147.0
+offset_bottom = 277.0
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 195.0
+offset_top = 230.0
+offset_right = 261.0
+offset_bottom = 280.0
+text = "2"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 310.0
+offset_top = 230.0
+offset_right = 376.0
+offset_bottom = 280.0
+text = "3"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 297.0
+offset_top = 19.0
+offset_right = 603.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("3_3heml")
+theme_override_font_sizes/font_size = 51
+text = "Levels"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

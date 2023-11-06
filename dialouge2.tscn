@@ -42,10 +42,10 @@ texture = ExtResource("5_r5vg1")
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.262857
-anchor_top = -0.16129
-anchor_right = 0.235428
-anchor_bottom = -0.16129
+anchor_left = -0.261714
+anchor_top = -0.0537635
+anchor_right = 0.236571
+anchor_bottom = -0.0537634
 offset_left = 229.0
 offset_top = 8.0
 offset_right = 654.0
@@ -55,6 +55,7 @@ theme_override_font_sizes/font_size = 29
 text = "Hello!"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Panel"]

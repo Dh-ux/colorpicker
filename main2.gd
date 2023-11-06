@@ -123,7 +123,7 @@ func color_picked(target):
 		$Node/lightgreen.visible = true				
 
 func game_over():
-	pass
+	$OverPanel.visible = true
 
 
 
@@ -159,4 +159,4 @@ func _on_timer_timeout():
 
 
 func _on_next_button_pressed():
-	get_tree().change_scene_to_file("res://start.tscn")
+	get_tree().change_scene_to_file("res://dialouge3.tscn")

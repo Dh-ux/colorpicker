@@ -301,8 +301,8 @@ offset_right = 917.0
 offset_bottom = 638.0
 
 [node name="Sprite2D" type="Sprite2D" parent="OverPanel"]
-position = Vector2(444, 43)
-scale = Vector2(0.48, 0.26)
+position = Vector2(444.5, 43)
+scale = Vector2(0.47421, 0.26)
 texture = ExtResource("29_sqvaa")
 
 [node name="Label" type="Label" parent="OverPanel"]
@@ -313,7 +313,7 @@ offset_right = 498.0
 offset_bottom = 76.0
 theme_override_fonts/font = ExtResource("30_2rugy")
 theme_override_font_sizes/font_size = 27
-text = "完成！"
+text = "Finish!"
 
 [node name="nextButton" type="Button" parent="OverPanel"]
 layout_mode = 0
@@ -331,6 +331,14 @@ initial_velocity_min = 900.0
 initial_velocity_max = 920.0
 scale_amount_min = 0.15
 scale_amount_max = 0.3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 574.0
+offset_right = 250.0
+offset_bottom = 594.0
+theme_override_fonts/font = ExtResource("30_2rugy")
+text = "Pixies from here -->"
 
 [connection signal="input_event" from="pickers/darkorange" to="pickers/darkorange" method="_on_input_event"]
 [connection signal="mouse_entered" from="pickers/darkorange" to="pickers/darkorange" method="_on_mouse_entered"]

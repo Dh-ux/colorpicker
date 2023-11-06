@@ -122,6 +122,7 @@ func game_over():
 
 func _on_timer_timeout():
 	_timeout()
+	$Label.visible = false
 
 
 
