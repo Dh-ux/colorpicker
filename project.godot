@@ -21,3 +21,7 @@ window/size/viewport_width=950
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://resources/CASED/picker80.png"
 mouse_cursor/custom_image_hotspot=Vector2(0, 70)
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

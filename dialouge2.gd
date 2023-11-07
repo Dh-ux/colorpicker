@@ -1,6 +1,6 @@
 extends Node2D
 
-var dialogues = ['Nicely done!','I have rummaged through the workshop and it looks like there are more paintings that have been damaged...','The one with the ticking clock is this one.','Looks like it is a... wedding anniversary oil painting?','Why on earth would the pixies want to destroy something like this—is it out of jealousy, perhaps?','Anyway, let us stick to our earlier teamwork, and I’m counting on you again!']
+var dialogues = ['Nicely done!','I have rummaged through the workshop and it looks like there are more paintings that have been damaged...','The one with the ticking clock is this one.','Looks like it is a... wedding anniversary oil painting?','Why on earth would the pixies want to destroy something like this? Out of jealousy, perhaps?','Anyway, let us stick to our earlier teamwork, and I’m counting on you again!']
 var d_index = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,17 +1,27 @@
 [gd_scene load_steps=5 format=3 uid="uid://d2vd5gq1br6gl"]
 
 [ext_resource type="Script" path="res://start.gd" id="1_qmdot"]
-[ext_resource type="Texture2D" uid="uid://dc60wsuv0ypqm" path="res://resources/CASED/cover.png" id="2_k46og"]
+[ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="2_rn148"]
 [ext_resource type="Texture2D" uid="uid://dl36c5wd5mxg4" path="res://resources/CASED/coverBlackButton.png" id="3_mlqiy"]
 [ext_resource type="FontFile" uid="uid://7fskqvkcefli" path="res://resources/fonts/PressStart2P.ttf" id="5_wiwsg"]
 
 [node name="start" type="Node2D"]
 script = ExtResource("1_qmdot")
 
-[node name="backrgound" type="Sprite2D" parent="."]
-position = Vector2(470.694, 326.5)
-scale = Vector2(2.0475, 2.09568)
-texture = ExtResource("2_k46og")
+[node name="back" type="Sprite2D" parent="."]
+position = Vector2(480, 317)
+scale = Vector2(0.50763, 0.505208)
+texture = ExtResource("2_rn148")
+
+[node name="start2" type="Label" parent="back"]
+offset_left = -809.645
+offset_top = -395.876
+offset_right = 846.355
+offset_bottom = -113.876
+theme_override_colors/font_color = Color(0.94902, 0.941176, 0.905882, 1)
+theme_override_fonts/font = ExtResource("5_wiwsg")
+theme_override_font_sizes/font_size = 103
+text = "PIXEL-PIXIES"
 
 [node name="startButton" type="Button" parent="."]
 offset_left = 139.0
@@ -44,6 +54,7 @@ offset_left = 150.0
 offset_top = 319.0
 offset_right = 381.0
 offset_bottom = 357.0
+theme_override_colors/font_color = Color(0.878431, 0.835294, 0.929412, 1)
 theme_override_fonts/font = ExtResource("5_wiwsg")
 theme_override_font_sizes/font_size = 33
 text = "START!!"
@@ -54,7 +65,7 @@ scale = Vector2(0.515966, 0.509877)
 texture = ExtResource("3_mlqiy")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(463, 500.5)
+position = Vector2(478, 505)
 scale = Vector2(0.407563, 0.289506)
 texture = ExtResource("3_mlqiy")
 
@@ -63,6 +74,7 @@ offset_left = 177.0
 offset_top = 415.0
 offset_right = 333.0
 offset_bottom = 453.0
+theme_override_colors/font_color = Color(0.878431, 0.882353, 0.776471, 1)
 theme_override_fonts/font = ExtResource("5_wiwsg")
 theme_override_font_sizes/font_size = 26
 text = "CREDIT"
@@ -72,6 +84,7 @@ offset_left = 203.0
 offset_top = 503.0
 offset_right = 307.0
 offset_bottom = 541.0
+theme_override_colors/font_color = Color(0.776471, 0.835294, 0.886275, 1)
 theme_override_fonts/font = ExtResource("5_wiwsg")
 theme_override_font_sizes/font_size = 26
 text = "QUIT"

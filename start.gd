@@ -19,5 +19,7 @@ func _on_quit_button_pressed():
 	get_tree().quit()
 
 
+
+
 func _on_credit_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://resources/credit.tscn")

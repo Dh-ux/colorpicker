@@ -1,0 +1,122 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqtfsoifbi2w8"]
+
+[ext_resource type="Script" path="res://resources/credit.gd" id="1_ingfh"]
+[ext_resource type="Texture2D" uid="uid://b4acaw7k4lyes" path="res://resources/CASED/startmenu.png" id="1_pip83"]
+[ext_resource type="FontFile" uid="uid://7fskqvkcefli" path="res://resources/fonts/PressStart2P.ttf" id="2_cd75b"]
+
+[node name="credit" type="Node2D"]
+script = ExtResource("1_ingfh")
+metadata/_edit_vertical_guides_ = [-407.0]
+
+[node name="back" type="Sprite2D" parent="."]
+position = Vector2(495, 325)
+scale = Vector2(0.568667, 0.539435)
+texture = ExtResource("1_pip83")
+
+[node name="Label" type="Label" parent="back"]
+offset_left = -504.689
+offset_top = -526.477
+offset_right = 237.311
+offset_bottom = -342.477
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 106
+text = "Credits"
+
+[node name="Label9" type="Label" parent="back"]
+offset_left = -107.268
+offset_top = 240.993
+offset_right = 564.732
+offset_bottom = 424.993
+theme_override_colors/font_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 26
+text = "Yiqi"
+
+[node name="Label4" type="Label" parent="back"]
+offset_left = -235.639
+offset_top = -231.724
+offset_right = 436.361
+offset_bottom = -47.7239
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 51
+text = "Programmer"
+
+[node name="Label3" type="Label" parent="back"]
+offset_left = -805.392
+offset_top = 114.935
+offset_right = -133.392
+offset_bottom = 298.935
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 51
+text = "Artists"
+
+[node name="Label2" type="Label" parent="back"]
+offset_left = -810.668
+offset_top = -235.431
+offset_right = -138.668
+offset_bottom = -51.4315
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 51
+text = "Designers
+  "
+
+[node name="Label5" type="Label" parent="back"]
+offset_left = -186.415
+offset_top = 105.421
+offset_right = 485.585
+offset_bottom = 175.421
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 51
+text = "Sound"
+
+[node name="Label6" type="Label" parent="back"]
+offset_left = -687.573
+offset_top = -122.35
+offset_right = -15.5728
+offset_bottom = 61.6498
+theme_override_colors/font_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 26
+text = "Lexin 
+
+Angel"
+
+[node name="Label7" type="Label" parent="back"]
+offset_left = -687.573
+offset_top = 231.724
+offset_right = -15.5728
+offset_bottom = 415.724
+theme_override_colors/font_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 26
+text = "Skye
+
+Angel
+
+Yiqi"
+
+[node name="Label8" type="Label" parent="back"]
+offset_left = -77.374
+offset_top = -126.058
+offset_right = 594.626
+offset_bottom = 57.9422
+theme_override_colors/font_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 26
+text = "Lexin"
+
+[node name="Button" type="Button" parent="back"]
+offset_left = -341.149
+offset_top = 480.132
+offset_right = -149.149
+offset_bottom = 534.132
+theme_override_fonts/font = ExtResource("2_cd75b")
+theme_override_font_sizes/font_size = 46
+text = "Back"
+
+[connection signal="pressed" from="back/Button" to="." method="_on_button_pressed"]
